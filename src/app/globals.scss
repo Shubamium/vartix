@@ -1,0 +1,132 @@
+:root {
+  --g: #b3f50d;
+  --p: #fc69b0;
+}
+html,
+body {
+  max-width: 100vw;
+  overflow-x: clip;
+  position: relative;
+  color: white;
+  background: url("/b/p_grid.png"), #151515;
+  background-blend-mode: multiply;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--fontm);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+main {
+  // min-height: 1500vh;
+  position: relative;
+  z-index: 1;
+}
+
+button {
+  padding: 0;
+  outline: none;
+  border: none;
+  background: none;
+  text-decoration: none;
+  color: black;
+  font-family: var(--fontm);
+  color: inherit;
+  font-weight: inherit;
+  font-weight: inherit;
+}
+
+.btn {
+  cursor: pointer;
+  transition: all 150ms ease;
+  font-family: var(--fontm);
+  display: block;
+  &:hover {
+    scale: 1.02;
+  }
+  &:active {
+    scale: 0.98;
+  }
+}
+
+a {
+  color: inherit;
+  font-family: inherit;
+}
+
+.hstroke {
+  position: relative;
+  width: max-content;
+  svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    bottom: -50%;
+    left: 0%;
+    z-index: -1;
+  }
+}
+
+.slider-text {
+  height: 80px;
+  background: url("/d/scroll-text.png"), var(--g);
+  background-repeat: repeat-x;
+  background-position: 0% 50%;
+  animation: scroll-text 90s infinite linear;
+  // background-size: 80% 80px;
+
+  &.r {
+    animation-direction: reverse;
+  }
+  @keyframes scroll-text {
+    from {
+      background-position: 0px 50%;
+    }
+    to {
+      background-position: 9000px 50%;
+    }
+  }
+}
+
+.infinitext {
+  font-size: 10rem;
+  position: absolute;
+  font-family: var(--fontstroke);
+  white-space: nowrap;
+  color: transparent;
+  text-stroke: 1px white;
+  -webkit-text-stroke: 1px white;
+  opacity: 0.04;
+
+  animation: marquee 15s linear infinite;
+  &.r {
+    animation-direction: reverse;
+  }
+  @keyframes marquee {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+}
