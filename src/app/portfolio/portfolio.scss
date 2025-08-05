@@ -1,0 +1,128 @@
+#p_portfolio {
+  padding-top: 120px;
+  min-height: 10000px;
+  #ph {
+    max-width: 1200px;
+    margin: 0 auto;
+    .phh {
+      position: relative;
+      h2 {
+        font-size: 7rem;
+        background: url("/b/textslide.png");
+        background-size: cover;
+        max-width: fit-content;
+        color: transparent;
+        background-clip: text;
+        background-size: 200% 100%;
+        background-position: 60%;
+      }
+      p {
+        opacity: 0.57;
+        margin-bottom: 1em;
+        max-width: 80%;
+      }
+
+      .edge {
+        width: 300px;
+        height: 50px;
+        margin: 1em auto;
+        user-select: none;
+        pointer-events: none;
+        border-top: 5px solid var(--g);
+        border-right: 5px solid var(--g);
+        position: absolute;
+        right: 0%;
+        top: -10%;
+      }
+
+      .triangle {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        bottom: 20%;
+        right: 10%;
+        background: white;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
+      }
+    }
+  }
+  #model_slider {
+    position: relative;
+    .controls {
+      top: 50%;
+      position: absolute;
+      z-index: 50;
+      width: 100%;
+      .btn.ctr {
+        background: var(--p);
+        color: black;
+        padding: 4em 0;
+        svg {
+          width: 50px;
+          height: 50px;
+        }
+
+        &.prev {
+          position: absolute;
+          left: 0%;
+        }
+        &.next {
+          position: absolute;
+          right: 0%;
+        }
+      }
+    }
+    .slider {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      height: 800px;
+      img {
+        height: 800px;
+        width: 800px;
+        object-fit: contain;
+        // background: red;
+        object-position: bottom;
+        position: absolute;
+        transition: all 1000ms ease-in-out;
+        transform-origin: bottom;
+        user-select: none;
+        pointer-events: none;
+        &.center {
+          z-index: 1;
+        }
+        &.lc {
+          transform: translateX(-70%);
+          z-index: -50;
+          scale: 0.9;
+          filter: grayscale(0.7) brightness(70%);
+        }
+        &.rc {
+          transform: translateX(70%);
+          z-index: -50;
+          scale: 0.9;
+          filter: grayscale(0.7) brightness(70%);
+        }
+        &.lb {
+          transform: translateX(-30%);
+          z-index: -100;
+          scale: 0.7;
+          filter: grayscale(1) brightness(30%);
+        }
+        &.rb {
+          transform: translateX(30%);
+          z-index: -100;
+          scale: 0.7;
+          filter: grayscale(1) brightness(30%);
+        }
+        &.off {
+          transform: translateX(00%);
+          z-index: -150;
+          scale: 0.5;
+          filter: grayscale(1) brightness(30%);
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
