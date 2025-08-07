@@ -2,8 +2,8 @@
   min-height: 1500px;
   .bh {
     height: 400px;
-    --bg: "/g/banner2.png";
-    background: url(--bg), rgb(32, 32, 32);
+    --bg: url("/g/banner2.png");
+    background: var(--bg), rgb(32, 32, 32);
     background-attachment: fixed;
     background-size: cover;
     background-blend-mode: multiply;

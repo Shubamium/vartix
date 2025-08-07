@@ -27,8 +27,7 @@ export default async function page({}: Props) {
         className="bh"
         style={
           {
-            "--bg":
-              banner.sizes?.max?.url ?? banner.url ?? "/g/placeholder2.png",
+            "--bg": `url('${banner.sizes?.max?.url ?? banner.url ?? "/g/placeholder2.png"}')`,
           } as CSSProperties
         }
       >
