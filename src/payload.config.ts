@@ -45,6 +45,7 @@ export default buildConfig({
       collections: {
         media: true,
       },
+      clientUploads: true,
 
       config: {
         endpoint: process.env.MINIO_URI ?? "",
