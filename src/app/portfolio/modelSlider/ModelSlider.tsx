@@ -1,9 +1,8 @@
 "use client";
 
-import { i, image } from "motion/react-client";
+import InfiniteText from "@/app/components/InfiniteText";
 import React, { useEffect, useState } from "react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
-import { FaChevronLeft } from "react-icons/fa6";
 
 type Props = {};
 
@@ -69,6 +68,11 @@ export default function ModelSlider({}: Props) {
         <button className="btn ctr next" onClick={prev}>
           <BiChevronRight />
         </button>
+      </div>
+      <div className="scroller">
+        <InfiniteText t="VARTIX" r={true} className="one" />
+        <InfiniteText t="VARTIX" r={true} className="two" />
+        <InfiniteText t="VARTIX" r={true} className="three" />
       </div>
       <div className="slider">
         {imageList.map((img, i) => (

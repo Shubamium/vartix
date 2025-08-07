@@ -1,0 +1,222 @@
+#p_values {
+  #hero {
+    .heading {
+      padding: 10% 15%;
+      .ht {
+        font-size: 4rem;
+        font-weight: lighter;
+        span {
+          font-weight: bold;
+          color: var(--p);
+          font-size: 5rem;
+        }
+      }
+      display: flex;
+      gap: 2em;
+      align-items: center;
+
+      .jaws {
+        position: absolute;
+        left: 50%;
+        display: flex;
+        gap: 1em;
+      }
+      .hb {
+        font-size: 4rem;
+        font-weight: lighter;
+        padding-left: 2em;
+        line-height: 1;
+        gap: 1em;
+        .hstroke {
+          color: var(--g);
+          font-size: 4rem;
+          font-family: var(--fontrs);
+
+          svg {
+            top: 30%;
+          }
+        }
+      }
+    }
+
+    .effecter {
+      position: relative;
+      z-index: -2;
+      overflow: hidden;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -10%;
+        left: 0%;
+        width: 100%;
+        height: 115%;
+        background: url("/g/banner.png"), black;
+        filter: blur(4px) brightness(0.25) grayscale(1);
+      }
+      height: 1000px;
+      margin-top: -150px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      .char {
+        height: 100%;
+        object-fit: contain;
+        object-position: bottom;
+        width: 900px;
+        // background: red;
+        position: absolute;
+        top: 5%;
+        z-index: 10;
+      }
+      .backdrop {
+        height: 100%;
+        width: 100%;
+        background: #121212;
+        position: absolute;
+        scale: 0.5;
+        outline: 10px solid #121212;
+        outline-offset: 50px;
+        filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.496));
+        z-index: 5;
+      }
+
+      .stroke {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 4px dashed #9b9b9b;
+        scale: 0.8;
+        mix-blend-mode: exclusion;
+        opacity: 0.8;
+        z-index: 15;
+      }
+      .vid {
+        width: 290px;
+        height: 290px;
+        object-fit: cover;
+        position: relative;
+        box-shadow: 0px 0px 4px black;
+        z-index: 12;
+        &.l {
+          left: -590px;
+          top: 180px;
+          transform: translateX(-50%);
+          border: 3px solid var(--g);
+        }
+        &.r {
+          left: 500px;
+          top: 590px;
+          border: 3px solid var(--p);
+        }
+      }
+    }
+  }
+
+  #mission {
+    background: url("/b/p_wavy.png"),
+      linear-gradient(to right, #1b1b1b, #0a0a0a);
+    border-top: 30px solid var(--p);
+    border-bottom: 30px solid var(--p);
+    text-align: center;
+    padding: 100px;
+    .logo {
+      height: 80px;
+    }
+    .sh {
+      font-size: 2rem;
+    }
+    .h {
+      font-size: 3.7rem;
+      color: var(--g);
+      max-width: 1200px;
+      margin: 0 auto;
+      line-height: 1;
+      margin-bottom: 1em;
+    }
+    p {
+      font-size: 1.4rem;
+      margin: 1em auto;
+      max-width: 800px;
+      opacity: 0.7;
+    }
+    position: relative;
+    .bgchar {
+      position: absolute;
+
+      top: 0%;
+      z-index: 10;
+      height: 100%;
+      &.l {
+        left: 0%;
+      }
+      &.r {
+        right: 0%;
+      }
+    }
+  }
+
+  #principle {
+    .ph {
+      background: #191919;
+      display: flex;
+      justify-content: space-between;
+      .l {
+        display: flex;
+        color: var(--g);
+        align-items: center;
+
+        font-size: 4rem;
+        gap: 1em;
+        padding-left: 1em;
+        .tri {
+          width: 80px;
+          height: 80px;
+          background: var(--g);
+          clip-path: polygon(0 0, 0 100%, 100% 52%);
+        }
+        h2 {
+          font-size: 3.5rem;
+          span {
+            font-family: var(--fontrs);
+            position: relative;
+            z-index: 1;
+          }
+        }
+      }
+      .r {
+        background: var(--p);
+        width: 400px;
+        display: flex;
+        clip-path: polygon(0 0, 100% 0, 100% 96%, 18% 88%);
+        justify-content: center;
+        padding: 1em;
+        padding-bottom: 3em;
+        img {
+          filter: invert(100%);
+          height: 150px;
+        }
+      }
+    }
+    background: url("/b/zigs.png");
+    .pl {
+      display: flex;
+      flex-direction: column;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 5% 0;
+      .prin {
+        margin: 50px 0;
+        h2 {
+          font-size: 3rem;
+          border-bottom: 3px solid white;
+          padding: 0.5em 0em;
+        }
+        p {
+          font-size: 1.5rem;
+          padding: 0.7em 0em;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}

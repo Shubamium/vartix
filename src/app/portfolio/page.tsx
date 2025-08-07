@@ -4,6 +4,7 @@ type Props = {};
 import "./portfolio.scss";
 import ModelSlider from "./modelSlider/ModelSlider";
 import SliderText from "../components/sliderText/SliderText";
+import WorkList from "./workList/WorkList";
 export default function page({}: Props) {
   return (
     <main id="p_portfolio">
@@ -27,6 +28,8 @@ export default function page({}: Props) {
       </section>
       <ModelSlider />
       <SliderText />
+
+      <WorkList />
     </main>
   );
 }

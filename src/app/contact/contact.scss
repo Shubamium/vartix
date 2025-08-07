@@ -1,0 +1,93 @@
+#p_contact {
+  #cont {
+    min-height: 70vh;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: flex-end;
+    .l {
+      padding: 2em;
+      padding-top: 170px;
+      .sh {
+        font-size: 2.4rem;
+        color: var(--g);
+        line-height: 0.4;
+      }
+      .h {
+        font-size: 5rem;
+        line-height: 1;
+        margin-bottom: 30px;
+        span {
+          font-size: 5rem;
+          font-family: var(--fontrs);
+          svg {
+            top: 30%;
+          }
+        }
+      }
+      .desc {
+        font-size: 1.6rem;
+        opacity: 0.5;
+        font-weight: lighter;
+        margin-bottom: 2em;
+      }
+      .cpart {
+        margin-top: 100px;
+        .btn-mail {
+          background: var(--g);
+          color: black;
+          padding: 0.5em 2em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1em;
+          max-width: fit-content;
+        }
+        .clist {
+          display: flex;
+          gap: 1em;
+          margin: 1em 0;
+          .btn-ct {
+            width: 50px;
+            height: 50px;
+            background: var(--g);
+            padding: 0.55em;
+            svg,
+            img {
+              width: 100%;
+              color: black;
+              height: 100%;
+            }
+
+            &.big {
+              width: fit-content;
+              display: flex;
+              justify-content: space-between;
+              color: black;
+              padding: 0.25em 1em;
+              align-items: center;
+              span {
+                width: 100%;
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+      }
+      .note {
+        font-size: 0.8rem;
+        opacity: 0.4;
+      }
+    }
+    .r {
+      max-height: 950px;
+      display: flex;
+      justify-content: flex-end;
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

@@ -98,6 +98,7 @@ export default function Home() {
 
       <SliderText />
       <section id="workflow">
+        <img src="/d/box-shadow.png" alt="" className="box" />
         <InfiniteText t="VARTIX" className="stroke" />
         <div className="wh">
           <div className="l">

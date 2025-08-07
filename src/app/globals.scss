@@ -116,7 +116,9 @@ a {
   text-stroke: 1px white;
   -webkit-text-stroke: 1px white;
   opacity: 0.04;
+  user-select: none;
 
+  pointer-events: none;
   animation: marquee 15s linear infinite;
   &.r {
     animation-direction: reverse;
