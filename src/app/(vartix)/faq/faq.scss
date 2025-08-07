@@ -1,0 +1,101 @@
+#p_faq {
+  #fh {
+    background: black;
+    margin-top: 100px;
+    .confine {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 4em;
+      h2 {
+        font-size: 6.5rem;
+      }
+      p {
+        margin: 3em 0;
+        font-size: 1.4rem;
+        max-width: 900px;
+        opacity: 0.3;
+      }
+      .hstroke {
+        font-family: var(--fontrs);
+        color: var(--g);
+        position: relative;
+        z-index: 1;
+        font-size: 5rem;
+        line-height: 1.2;
+        svg {
+          top: 50%;
+        }
+      }
+    }
+  }
+  padding-bottom: 500px;
+  #fl {
+    border: 2px dashed var(--g);
+
+    max-width: 1280px;
+    margin: 100px auto;
+    .infinitext {
+      top: 40%;
+      animation-duration: 100s;
+    }
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    .drop {
+      background: black;
+      padding: 3em;
+      .top {
+        display: flex;
+        justify-content: space-between;
+        .btn-drop {
+          background: var(--p);
+          width: 50px;
+          color: black;
+          padding: 0.5em;
+          svg {
+            width: 30px;
+            height: 30px;
+            scale: 2;
+            transition: all 500ms ease;
+          }
+        }
+      }
+
+      .content {
+        margin: 1em 0;
+        font-size: 1.4rem;
+        opacity: 0.54;
+        letter-spacing: 1px;
+        transition: all 500ms ease;
+        overflow-y: auto;
+        p {
+          margin-bottom: 1em;
+        }
+        a {
+          color: var(--p);
+        }
+        ul {
+          padding-left: 1em;
+        }
+      }
+      &.act {
+        .btn-drop {
+          rotate: 90deg;
+        }
+        .content {
+          // opacity: 0;
+          max-height: 500px;
+        }
+      }
+      &.clo {
+        .content {
+          // opacity: 0;
+          max-height: 0px;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
