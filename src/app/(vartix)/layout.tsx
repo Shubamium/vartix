@@ -29,7 +29,7 @@ const description = `
 `;
 const banner =
   "https://shubastore.caprover.venmi.art/api/public/dl/WU-VRzdt?inline=true";
-const url = "https://vartix.com";
+const url = "https://vartix3d.com";
 
 export const metadata: Metadata = {
   title: title,
