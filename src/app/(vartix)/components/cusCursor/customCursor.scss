@@ -1,0 +1,37 @@
+@use "_mixins" as *;
+#cursor {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 600;
+  background-blend-mode: exclusion;
+  mix-blend-mode: exclusion;
+  user-select: none;
+  pointer-events: none;
+
+  @include mq(1024px) {
+    display: none;
+  }
+  .circ {
+    width: 80px;
+    height: 80px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+
+    position: absolute;
+    z-index: 600;
+    opacity: 1;
+    top: 0%;
+    left: 0%;
+    background-blend-mode: exclusion;
+    mix-blend-mode: exclusion;
+    transition: outline-offset 200ms ease;
+    outline: 4px solid white;
+    outline-offset: 0px;
+    &.click {
+      // border-radius: 0%;
+      transform: scale(1.2);
+      outline-offset: 14px;
+    }
+  }
+}

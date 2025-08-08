@@ -5,6 +5,8 @@ import { CSSProperties } from "react";
 import Header from "./components/header/Header";
 import Script from "next/script";
 import Footer from "./components/footer/Footer";
+import LoadingScreen from "./components/loading/LoadingScreen";
+import CustomCursor from "./components/cusCursor/CustomCursor";
 const m = Manrope({
   subsets: ["latin"],
 });
@@ -68,6 +70,8 @@ export default function RootLayout({
           } as CSSProperties
         }
       >
+        <LoadingScreen />
+        <CustomCursor />
         <Header />
         {children}
         <Footer />

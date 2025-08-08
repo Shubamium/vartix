@@ -58,6 +58,9 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
+    @include mq(420px) {
+      padding: 0.55em;
+    }
     .drop {
       background: black;
       padding: 3em;
@@ -67,6 +70,7 @@
       @include mq(600px) {
         padding: 1em;
       }
+
       .top {
         display: flex;
         justify-content: space-between;
@@ -84,7 +88,9 @@
           width: 50px;
           color: black;
           padding: 0.5em;
-
+          @include mq(420px) {
+            height: 40px;
+          }
           svg {
             width: 30px;
             height: 30px;
