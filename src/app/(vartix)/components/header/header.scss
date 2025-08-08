@@ -225,7 +225,11 @@
     width: 10px;
     background: #ffffff1f;
     top: 0%;
-    right: 10vh;
+    right: 7vw;
+
+    @include mq(768px) {
+      right: 5vw;
+    }
   }
   .side-title {
     position: absolute;
@@ -249,6 +253,9 @@
     padding-right: 10vw;
     width: 100%;
     padding-top: 4em;
+    @include mq(1280px) {
+      padding-top: 2em;
+    }
     .topbt {
       display: flex;
       flex-direction: column;
@@ -258,8 +265,21 @@
       font-size: 7rem;
       font-weight: lighter;
       color: #272727;
-      line-height: 0.8;
+      line-height: 1;
       user-select: none;
+      @include mq(1440px) {
+        font-size: 6rem;
+      }
+      @include mq(1280px) {
+        font-size: 4rem;
+      }
+      @include mq(420px) {
+        font-size: 2rem;
+      }
+      @include mq(420px) {
+        color: rgb(206, 206, 206);
+        line-height: 0.9;
+      }
       &.drop {
         display: flex;
         flex-direction: row-reverse;
@@ -268,11 +288,45 @@
         .r {
           position: relative;
         }
+
+        @include mq(1024px, min) {
+          &:hover {
+            .l {
+              clip-path: inset(0 0% 0 0);
+              .btn-mini {
+                transform: translateX(0%);
+              }
+            }
+          }
+          .l {
+            clip-path: inset(100% 0% 0 0);
+            .btn-mini {
+              transform: translateX(100%);
+            }
+          }
+        }
+        @include mq(1024px) {
+          .r {
+            display: none;
+          }
+        }
         .l {
           color: #272727;
+          transition: all 600ms;
+          @include mq(420px) {
+            color: white;
+          }
           .btn-mini {
             font-size: 2.4rem;
             margin: 0.2em 0;
+            transition: all 500ms ease;
+            @include mq(1280px) {
+              font-size: 1.4rem;
+            }
+            @include mq(420px) {
+              font-size: 2rem;
+              width: 100%;
+            }
             &:hover {
               color: var(--p);
             }
@@ -298,7 +352,8 @@
           }
         }
       }
-      &:hover {
+      &:hover,
+      &:active {
         color: var(--g);
       }
     }
@@ -315,10 +370,17 @@
         gap: 0.2em;
         font-size: 3.2rem;
         margin: 0.11em 0;
+        @include mq(1366px) {
+          font-size: 2rem;
+        }
       }
       svg {
         width: 40px;
         height: 40px;
+        @include mq(1280px) {
+          height: 20px;
+          height: 20px;
+        }
       }
     }
   }

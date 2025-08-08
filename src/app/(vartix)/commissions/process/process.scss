@@ -1,3 +1,5 @@
+@use "_mixins" as *;
+
 #p_process {
   .wire {
     height: 1000px;
@@ -6,6 +8,9 @@
     top: 0%;
     background: url("/b/zigs.png");
     z-index: -10;
+    @include mq(1024px) {
+      height: 3000px;
+    }
   }
   #step {
     // padding: 2em 0;
@@ -13,15 +18,36 @@
     max-width: 1920px;
     margin: 0 auto;
     padding-inline: 200px;
+    @include mq(1440px) {
+      padding-top: 200px;
+      padding-inline: 50px;
+    }
+    @include mq(420px) {
+      padding-top: 120px;
+      padding-inline: 20px;
+    }
     .sh {
       .ht {
         font-size: 4rem;
         line-height: 0.6;
+
+        @include mq(768px) {
+          font-size: 2rem;
+        }
+        @include mq(420px) {
+          font-size: 1.5rem;
+        }
       }
 
       .hm {
         font-size: 5rem;
         line-height: 1;
+        @include mq(768px) {
+          font-size: 3rem;
+        }
+        @include mq(420px) {
+          font-size: 2rem;
+        }
       }
 
       .hb {
@@ -29,6 +55,12 @@
         font-family: var(--fontrs);
         width: fit-content;
         color: var(--g);
+        @include mq(768px) {
+          font-size: 3.4rem;
+        }
+        @include mq(420px) {
+          font-size: 2.6rem;
+        }
         svg {
           top: 10%;
         }
@@ -40,12 +72,19 @@
       gap: 1em;
       margin-top: 50px;
 
+      @include mq(1024px) {
+        flex-direction: column;
+      }
       .s {
         & > p {
           font-size: 2rem;
           letter-spacing: 20px;
           opacity: 0.5;
           font-weight: lighter;
+
+          @include mq(1440px) {
+            font-size: 1.2rem;
+          }
         }
         width: 100%;
         .panel {
@@ -55,10 +94,17 @@
           background: #171717;
           box-shadow: 0px 0px 45px black inset;
           padding-bottom: 50px;
+          @include mq(1280px) {
+            padding: 2em 2em;
+          }
+
           h2 {
             font-size: 2rem;
             line-height: 1;
             margin-bottom: 20px;
+            @include mq(1440px) {
+              font-size: 1.4rem;
+            }
           }
           p {
             opacity: 0.4;
@@ -95,10 +141,15 @@
             justify-content: space-between;
             gap: 2em;
             margin-bottom: 160px;
+            white-space: nowrap;
             svg {
               width: 30px;
               height: 30px;
               scale: 1.4;
+            }
+
+            @include mq(420px) {
+              font-size: 1rem;
             }
           }
 
@@ -110,6 +161,9 @@
             .stage {
               background: #262626;
               padding: 0.5em 1.3em;
+              @include mq(420px) {
+                font-size: 0.7rem;
+              }
               .smol {
                 font-weight: lighter;
               }
@@ -123,6 +177,15 @@
         display: flex;
         align-items: center;
         margin-top: 200px;
+
+        @include mq(1024px) {
+          height: 50px;
+          justify-content: center;
+          margin-top: 1em;
+          svg {
+            rotate: 90deg;
+          }
+        }
         svg {
           width: 30px;
           height: 30px;
@@ -136,6 +199,9 @@
     grid-template-columns: 1fr 1fr;
     margin: 100px 0;
     position: relative;
+    @include mq(1024px) {
+      grid-template-columns: 1fr;
+    }
     .dprio {
       position: absolute;
       right: 0%;
@@ -151,6 +217,9 @@
     .r {
       background: #1d1d1d;
       padding: 3em 0 3em 3em;
+      @include mq(420px) {
+        padding: 1.5em 0 1.5em 1.5em;
+      }
       .panel {
         width: 100%;
         height: 100%;
@@ -160,22 +229,38 @@
         justify-content: center;
         padding: 15%;
         text-align: right;
+        @include mq(420px) {
+          padding: 7%;
+        }
         h2 {
           margin-bottom: 2em;
           .smol {
             font-size: 2.5rem;
             font-weight: lighter;
+            @include mq(550px) {
+              font-size: 2rem;
+            }
           }
 
           .hstroke {
             font-size: 3rem;
             position: relative;
             z-index: 1;
+            @include mq(1024px) {
+              display: block;
+            }
+            @include mq(550px) {
+              font-size: 2rem;
+            }
           }
         }
         p {
           opacity: 0.4;
           margin-bottom: 2em;
+
+          @include mq(550px) {
+            font-size: 0.9rem;
+          }
         }
       }
     }
@@ -190,6 +275,27 @@
       margin-top: 200px;
       position: relative;
       margin-bottom: 200px;
+      @include mq(1440px) {
+        gap: 50px;
+        margin-top: 120px;
+      }
+
+      @include mq(1024px) {
+        // flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+      }
+      @include mq(800px) {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+      }
+      @include mq(550px) {
+        padding: 1em 0;
+        margin-top: 50px;
+      }
     }
     .tbg {
       top: 20%;
@@ -205,7 +311,9 @@
       position: absolute;
       bottom: 0%;
       left: 50%;
-      transform: translateX(-50%) translateY(50%);
+      @include mq(1024px, min) {
+        transform: translateX(-50%) translateY(50%);
+      }
     }
     .card {
       width: 425px;
@@ -213,6 +321,12 @@
       border-image: linear-gradient(140deg, #b3f50d -20%, #fc69b0) 30% 1;
       background: linear-gradient(to bottom, #171717, #0c0c0c);
       padding: 3em;
+      @include mq(550px) {
+        width: 100%;
+      }
+      @include mq(1280px) {
+        padding: 1.5em;
+      }
       & > .icon {
         background: white;
         width: 80px;
@@ -224,9 +338,11 @@
         }
       }
 
-      &.one,
-      &.three {
-        transform: translateY(50px);
+      @include mq(1024px, min) {
+        &.one,
+        &.three {
+          transform: translateY(50px);
+        }
       }
       position: relative;
       &::after {
@@ -246,6 +362,9 @@
       p {
         opacity: 0.5;
         line-height: 1.4;
+        @include mq(420px) {
+          font-size: 0.95rem;
+        }
       }
 
       .points {
@@ -253,6 +372,9 @@
         flex-direction: column;
         margin-top: 150px;
         gap: 1em;
+        @include mq(420px) {
+          margin-top: 20px;
+        }
         .point {
           display: grid;
           grid-template-columns: 40px 1fr;
@@ -271,6 +393,9 @@
             width: 100%;
             background: #393939;
             padding: 0.5em;
+            @include mq(420px) {
+              font-size: 0.9rem;
+            }
           }
         }
       }
