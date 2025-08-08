@@ -1,8 +1,9 @@
+@use "_mixins" as *;
+
 #p_portfolio {
   padding-top: 120px;
-  min-height: 10000px;
   #ph {
-    max-width: 1200px;
+    max-width: min(1200px, 90%);
     margin: 0 auto;
     .phh {
       position: relative;
@@ -15,11 +16,21 @@
         background-clip: text;
         background-size: 200% 100%;
         background-position: 60%;
+        @include mq(768px) {
+          font-size: 4rem;
+        }
+        @include mq(420px) {
+          font-size: 2.4rem;
+        }
       }
       p {
         opacity: 0.57;
         margin-bottom: 1em;
         max-width: 80%;
+
+        @include mq(420px) {
+          font-size: 0.9rem;
+        }
       }
 
       .edge {
@@ -43,6 +54,9 @@
         right: 10%;
         background: white;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
+        @include mq(768px) {
+          display: none;
+        }
       }
     }
   }
@@ -153,13 +167,32 @@
     max-width: 1920px;
     margin: 0 auto;
     padding: 100px 100px;
+    @include mq(1280px) {
+      padding: 5%;
+    }
     .title {
       font-size: 3rem;
       display: flex;
       align-items: center;
       gap: 0.5em;
+      @include mq(1280px) {
+        font-size: 1rem;
+      }
+
+      @include mq(420px) {
+        margin-bottom: 20px;
+      }
       .hstroke {
         font-family: var(--fontrs);
+        @include mq(1280px) {
+          font-size: 3rem;
+        }
+        @include mq(550px) {
+          font-size: 2rem;
+        }
+        @include mq(420px) {
+          font-size: 1.2rem;
+        }
         svg {
           top: 30%;
           z-index: 2;
@@ -171,7 +204,9 @@
       flex-direction: column;
       --gap: 2em;
       gap: var(--gap);
-
+      @include mq(550px) {
+        --gap: 1em;
+      }
       .showcase {
         display: flex;
         flex-direction: column;
@@ -189,6 +224,10 @@
           gap: var(--gap);
           // align-items: center;
           // display: flex;
+          @include mq(420px) {
+            display: grid;
+            grid-template-columns: 1fr;
+          }
           .ibl,
           .ibr {
             width: 100%;
@@ -197,12 +236,15 @@
             max-height: 100%;
             object-fit: cover;
             max-height: 500px;
+            @include mq(420px) {
+              max-height: auto;
+            }
           }
           video {
             width: 100%;
-            height: 100%;
             object-fit: cover;
             background: rgb(30, 30, 30);
+            aspect-ratio: 1 / 1;
           }
         }
         .display {

@@ -1,14 +1,24 @@
+@use "_mixins" as *;
 #p_values {
   #hero {
     .heading {
       padding: 10% 15%;
+      @include mq(550px) {
+        padding-top: 120px;
+      }
       .ht {
         font-size: 4rem;
         font-weight: lighter;
+        @include mq(1024px) {
+          font-size: 2rem;
+        }
         span {
           font-weight: bold;
           color: var(--p);
           font-size: 5rem;
+          @include mq(1024px) {
+            font-size: 2.5rem;
+          }
         }
       }
       display: flex;
@@ -27,11 +37,23 @@
         padding-left: 2em;
         line-height: 1;
         gap: 1em;
+        @include mq(1024px) {
+          font-size: 2rem;
+        }
+        @include mq(4550px) {
+          padding-left: 0.5em;
+          margin-bottom: 50px;
+        }
         .hstroke {
           color: var(--g);
           font-size: 4rem;
           font-family: var(--fontrs);
-
+          @include mq(1024px) {
+            font-size: 2.5rem;
+          }
+          @include mq(550px) {
+            font-size: 2rem;
+          }
           svg {
             top: 30%;
           }
@@ -58,6 +80,9 @@
       display: flex;
       justify-content: center;
       position: relative;
+      @include mq(550px) {
+        height: 600px;
+      }
       .char {
         height: 100%;
         object-fit: contain;
@@ -119,11 +144,20 @@
     border-bottom: 30px solid var(--p);
     text-align: center;
     padding: 100px;
+    @include mq(550px) {
+      padding: 90px 20px;
+    }
     .logo {
       height: 80px;
     }
     .sh {
       font-size: 2rem;
+      @include mq(1440px) {
+        font-size: 1.3rem;
+      }
+      @include mq(420px) {
+        font-size: 0.9rem;
+      }
     }
     .h {
       font-size: 3.7rem;
@@ -132,12 +166,24 @@
       margin: 0 auto;
       line-height: 1;
       margin-bottom: 1em;
+      @include mq(1440px) {
+        font-size: 3rem;
+      }
+      @include mq(768px) {
+        font-size: 2rem;
+      }
+      @include mq(420px) {
+        font-size: 1rem;
+      }
     }
     p {
       font-size: 1.4rem;
       margin: 1em auto;
       max-width: 800px;
       opacity: 0.7;
+      @include mq(420px) {
+        font-size: 1rem;
+      }
     }
     position: relative;
     .bgchar {
@@ -148,9 +194,15 @@
       height: 100%;
       &.l {
         left: 0%;
+        @include mq(768px) {
+          left: -50%;
+        }
       }
       &.r {
         right: 0%;
+        @include mq(768px) {
+          right: -50%;
+        }
       }
     }
   }
@@ -168,14 +220,32 @@
         font-size: 4rem;
         gap: 1em;
         padding-left: 1em;
+        @include mq(768px) {
+          padding-left: 0;
+        }
+        @include mq(420px) {
+          gap: 0.2em;
+        }
         .tri {
           width: 80px;
           height: 80px;
           background: var(--g);
           clip-path: polygon(0 0, 0 100%, 100% 52%);
+          @include mq(768px) {
+            width: 30px;
+            height: 30px;
+          }
         }
         h2 {
           font-size: 3.5rem;
+          @include mq(1024px) {
+            font-size: 2rem;
+          }
+          @include mq(420px) {
+            font-size: 1.4rem;
+            padding: 0.5em;
+            white-space: nowrap;
+          }
           span {
             font-family: var(--fontrs);
             position: relative;
@@ -191,9 +261,18 @@
         justify-content: center;
         padding: 1em;
         padding-bottom: 3em;
+        @include mq(1024px) {
+          width: 30%;
+        }
+        @include mq(420px) {
+          display: none;
+        }
         img {
           filter: invert(100%);
           height: 150px;
+          @include mq(550px) {
+            height: 40px;
+          }
         }
       }
     }
@@ -203,18 +282,31 @@
       flex-direction: column;
       max-width: 1000px;
       margin: 0 auto;
-      padding: 5% 0;
+      padding: 5% 5%;
+
       .prin {
         margin: 50px 0;
         h2 {
           font-size: 3rem;
           border-bottom: 3px solid white;
           padding: 0.5em 0em;
+          @include mq(1024px) {
+            font-size: 2rem;
+          }
+          @include mq(768px) {
+            font-size: 1.2rem;
+          }
         }
         p {
           font-size: 1.5rem;
           padding: 0.7em 0em;
           opacity: 0.7;
+          @include mq(1024px) {
+            font-size: 1.2rem;
+          }
+          @include mq(768px) {
+            font-size: 1rem;
+          }
         }
       }
     }

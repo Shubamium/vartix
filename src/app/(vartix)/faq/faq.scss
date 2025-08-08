@@ -1,3 +1,4 @@
+@use "_mixins" as *;
 #p_faq {
   #fh {
     background: black;
@@ -8,12 +9,21 @@
       padding: 4em;
       h2 {
         font-size: 6.5rem;
+        @include mq(1280px) {
+          font-size: 5rem;
+        }
+        @include mq(768px) {
+          font-size: 3rem;
+        }
       }
       p {
         margin: 3em 0;
         font-size: 1.4rem;
         max-width: 900px;
         opacity: 0.3;
+        @include mq(550px) {
+          font-size: 1rem;
+        }
       }
       .hstroke {
         font-family: var(--fontrs);
@@ -22,6 +32,12 @@
         z-index: 1;
         font-size: 5rem;
         line-height: 1.2;
+        @include mq(768px) {
+          font-size: 3rem;
+        }
+        @include mq(550px) {
+          font-size: 2rem;
+        }
         svg {
           top: 50%;
         }
@@ -45,14 +61,30 @@
     .drop {
       background: black;
       padding: 3em;
+      @include mq(1024px) {
+        padding: 2em;
+      }
+      @include mq(600px) {
+        padding: 1em;
+      }
       .top {
         display: flex;
         justify-content: space-between;
+        gap: 0.25em;
+        @include mq(768px) {
+          h2 {
+            font-size: 1.2rem;
+          }
+        }
+        @include mq(550px) {
+          font-size: 1rem;
+        }
         .btn-drop {
           background: var(--p);
           width: 50px;
           color: black;
           padding: 0.5em;
+
           svg {
             width: 30px;
             height: 30px;
@@ -69,6 +101,12 @@
         letter-spacing: 1px;
         transition: all 500ms ease;
         overflow-y: auto;
+        @include mq(768px) {
+          font-size: 1rem;
+        }
+        @include mq(550px) {
+          font-size: 0.9rem;
+        }
         p {
           margin-bottom: 1em;
         }
