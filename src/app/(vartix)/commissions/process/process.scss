@@ -135,6 +135,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 100px 0;
+    position: relative;
+    .dprio {
+      position: absolute;
+      right: 0%;
+      top: -5%;
+    }
     .l {
       img {
         max-width: 100%;

@@ -124,6 +124,7 @@ export default function page({}: Props) {
         </div>
       </section>
       <section id="priority">
+        <img src="/d/prio.png" alt="" className="dprio" />
         <div className="l">
           <img src="/g/placeholder2.png" alt="" />
         </div>

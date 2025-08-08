@@ -140,7 +140,7 @@ const MediaRender = ({ media, className }: MediaRender) => {
       <img
         className={`${className} loading`}
         src={"/d/imload.gif"}
-        data-src={media.sizes?.medium?.url ?? media.url}
+        data-src={media.url}
       />
     );
   }

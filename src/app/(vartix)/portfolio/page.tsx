@@ -21,11 +21,12 @@ export default async function page({}: Props) {
     ?.map((v) => {
       if (typeof v === "string") return null;
       const media = v as Media;
-      return media.sizes?.small?.url ?? media.url;
+      return media.sizes?.max?.url ?? media.url;
     })
     .filter((v) => v !== null) as string[];
 
   const pl = pfw.wl;
+
   return (
     <main id="p_portfolio">
       <section id="ph">

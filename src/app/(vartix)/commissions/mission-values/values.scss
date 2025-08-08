@@ -113,8 +113,8 @@
   }
 
   #mission {
-    background: url("/b/p_wavy.png"),
-      linear-gradient(to right, #1b1b1b, #0a0a0a);
+    background:
+      url("/b/p_wavy.png"), linear-gradient(to right, #1b1b1b, #0a0a0a);
     border-top: 30px solid var(--p);
     border-bottom: 30px solid var(--p);
     text-align: center;

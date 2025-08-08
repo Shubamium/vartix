@@ -1,3 +1,4 @@
+@use "_mixins" as *;
 :root {
   --g: #b3f50d;
   --p: #fc69b0;
@@ -94,6 +95,14 @@ a {
   animation: scroll-text 90s infinite linear;
   // background-size: 80% 80px;
 
+  @include mq(1024px) {
+    height: 50px;
+    background-size: auto 30px;
+  }
+  @include mq(420) {
+    height: 40px;
+    background-size: auto 23px;
+  }
   &.r {
     animation-direction: reverse;
   }
