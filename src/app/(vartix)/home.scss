@@ -168,7 +168,7 @@
     background-attachment: fixed;
     padding: 4%;
     position: relative;
-    @include mq(1024) {
+    @include mq(1024px) {
       height: auto;
     }
     .stroke {
@@ -207,7 +207,7 @@
       @include mq(420px) {
         padding: 0.25em 1em;
       }
-      @include mq(1024) {
+      @include mq(1024px) {
         display: flex;
         flex-direction: column;
         gap: 2em;
@@ -228,7 +228,7 @@
           align-items: center;
           justify-content: center;
           margin: 1em;
-          @include mq(420) {
+          @include mq(420px) {
             gap: 0.25em;
           }
           .btn-l {
@@ -289,10 +289,10 @@
           max-width: 80%;
           font-size: 1.2rem;
           margin-bottom: 1em;
-          @include mq(1440) {
+          @include mq(1440px) {
             font-size: 1rem;
           }
-          @include mq(550) {
+          @include mq(550px) {
             max-width: 100%;
             font-size: 0.9rem;
           }
@@ -404,7 +404,7 @@
         @include mq(1280px) {
           min-height: 800px;
         }
-        @include mq(768) {
+        @include mq(768px) {
           min-height: 500px;
         }
         img {
@@ -576,14 +576,14 @@
         font-size: 2rem;
         font-weight: lighter;
         margin-bottom: 50px;
-        @include mq(420) {
+        @include mq(420px) {
           font-size: 1.7rem;
         }
         span {
           color: var(--g);
           font-size: 3rem;
           font-family: var(--fontrs);
-          @include mq(420) {
+          @include mq(420px) {
             font-size: 2.5rem;
           }
         }
@@ -757,10 +757,10 @@
             transition: all 100ms ease;
             white-space: nowrap;
             display: block;
-            @include mq(1024) {
+            @include mq(1024px) {
               font-size: 1.2rem;
             }
-            @include mq(600) {
+            @include mq(600px) {
               font-size: 1rem;
             }
             h2 {

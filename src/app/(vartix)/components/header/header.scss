@@ -218,6 +218,9 @@
     left: -10%;
     opacity: 0.02;
     scale: 1;
+    user-select: none;
+    pointer-events: none;
+    z-index: -300;
   }
   .line {
     height: 100vh;
@@ -253,6 +256,8 @@
     padding-right: 10vw;
     width: 100%;
     padding-top: 4em;
+    position: relative;
+    z-index: 1;
     @include mq(1280px) {
       padding-top: 2em;
     }
@@ -260,6 +265,11 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+
+      .big-logo {
+        user-select: none;
+        pointer-events: none;
+      }
     }
     .btn-nav {
       font-size: 7rem;

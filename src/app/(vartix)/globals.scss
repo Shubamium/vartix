@@ -99,7 +99,7 @@ a {
     height: 50px;
     background-size: auto 30px;
   }
-  @include mq(420) {
+  @include mq(420px) {
     height: 40px;
     background-size: auto 23px;
   }
