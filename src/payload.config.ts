@@ -43,7 +43,9 @@ export default buildConfig({
     s3Storage({
       bucket: "vartix",
       collections: {
-        media: true,
+        media: {
+          disablePayloadAccessControl: true,
+        },
       },
       clientUploads: true,
 
