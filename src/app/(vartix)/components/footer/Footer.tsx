@@ -76,10 +76,13 @@ export default function Footer({}: Props) {
               <a href="mailto:vartix.3d@gmail.com" className="btn btn-fs">
                 <CgMail /> vartix.3d@gmail.com
               </a>
-              <a href="mailto:vartix.3d@gmail.com" className="btn btn-fs">
+              <a
+                href="https://bsky.app/profile/vlightning.bsky.social"
+                className="btn btn-fs"
+              >
                 <FaBluesky /> @vlightning.bsky.social
               </a>
-              <a href="mailto:vartix.3d@gmail.com" className="btn btn-fs">
+              <a href="https://x.com/_vlightning" className="btn btn-fs">
                 <FaXTwitter /> @_vlightning
               </a>
               <a className="btn btn-fs">

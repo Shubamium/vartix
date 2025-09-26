@@ -442,7 +442,9 @@ export default async function Home() {
             </div>
           </div>
 
-          <Principle />
+          <div className="pc">
+            <Principle />
+          </div>
         </>
       )}
     </main>

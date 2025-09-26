@@ -257,7 +257,7 @@
         p {
           opacity: 0.4;
           margin-bottom: 2em;
-
+          font-size: 1.3rem;
           @include mq(550px) {
             font-size: 0.9rem;
           }

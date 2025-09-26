@@ -10,10 +10,10 @@
     flex-direction: column;
     justify-content: space-between;
 
-    padding-top: 10%;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 8%;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 4%;
+    padding-bottom: 4%;
     @include mq(1024px) {
       padding-top: 130px;
     }
@@ -36,7 +36,7 @@
       position: absolute;
       top: -0%;
       line-height: 0.9;
-      right: 2%;
+      right: -2%;
       color: transparent;
       text-stroke: 1px white;
       -webkit-text-stroke: 1px white;
@@ -55,6 +55,7 @@
 
     .top {
       filter: drop-shadow(0px 0px 10px black);
+      // transform: translateX(-5%) translateY(-30%);
       .htt {
         font-size: 3rem;
         font-weight: 200;
@@ -730,11 +731,12 @@
           position: absolute;
           display: flex;
           flex-direction: column;
-          left: -40%;
+          left: 5%;
           gap: 2.3em;
           z-index: 2;
           top: 0%;
           animation: elevator 50s infinite linear alternate-reverse;
+
           @include mq(600px) {
             animation-name: elevatorstr;
           }
@@ -786,6 +788,18 @@
             }
           }
 
+          @for $i from 1 through 50 {
+            .lift:nth-child(#{$i}) {
+              transform: translateX(#{15% * $i});
+
+              @include mq(1024px, min) {
+                transform: translateX(#{10% * $i});
+              }
+              @include mq(600px, min) {
+                transform: translateX(#{7% * $i});
+              }
+            }
+          }
           @keyframes elevator {
             from {
               transform: translateX(0%) translateY(0%);
@@ -802,27 +816,22 @@
               transform: translateX(0%) translateY(-100%);
             }
           }
-
-          @for $i from 1 through 50 {
-            .lift:nth-child(#{$i}) {
-              @include mq(1024px, min) {
-                transform: translateX(#{10% * $i});
-              }
-              @include mq(600px, min) {
-                transform: translateX(#{7% * $i});
-              }
-            }
-          }
         }
       }
     }
   }
 
+  .pc {
+    background-color: #0a0a0a;
+  }
+
   #principle {
     display: grid;
-    grid-template-columns: 1fr 1.3fr;
+    grid-template-columns: 1.2fr 1.1fr;
+    max-width: 1920px;
+    margin: 0 auto;
     // max-width: 1920px;
-    background: #0c0c0c;
+
     gap: 4em;
     @include mq(1280px) {
       grid-template-columns: 1fr 2fr;
@@ -835,7 +844,13 @@
         object-fit: cover;
         width: 100%;
         height: 100%;
-        mask-image: linear-gradient(to right, white, transparent);
+        mask-image: linear-gradient(
+          to right,
+          transparent 10%,
+          white,
+          transparent
+        );
+        object-position: left;
         @include mq(1280px) {
           mask-image: none;
         }

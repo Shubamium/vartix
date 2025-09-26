@@ -4,8 +4,8 @@ import "./header.scss";
 import React, { useState } from "react";
 import Link from "next/link";
 import { GoTriangleDown } from "react-icons/go";
-import { FaCircleXmark, FaXTwitter } from "react-icons/fa6";
-import { CgArrowTopRight } from "react-icons/cg";
+import { FaBluesky, FaCircleXmark, FaXTwitter } from "react-icons/fa6";
+import { CgArrowTopRight, CgMail } from "react-icons/cg";
 import { s } from "motion/react-client";
 type Props = {};
 
@@ -61,14 +61,21 @@ export default function Header({}: Props) {
               </Link>
 
               <div className="socials">
-                <a href="#" className="btn btn-social">
+                <a href="https://x.com/_vlightning" className="btn btn-social">
                   <FaXTwitter />
                 </a>
-                <a href="#" className="btn btn-social">
-                  <FaXTwitter />
+                <a href="mailto:vartix.3d@gmail.com" className="btn btn-social">
+                  <CgMail />
                 </a>
-                <a href="#" className="btn btn-social">
-                  <FaXTwitter />
+                <a
+                  href="https://bsky.app/profile/vlightning.bsky.social"
+                  className="btn btn-social"
+                >
+                  <FaBluesky />
+                </a>
+                <a href="https://vgen.co/VLightning" className="btn btn-social">
+                  <img src="/g/vgen.png" alt="" />
+                  vgen.co/VLightning
                 </a>
               </div>
             </div>
@@ -210,9 +217,9 @@ export default function Header({}: Props) {
             <button className="btn btn-nav ">
               CLOSE <FaCircleXmark />
             </button>
-            <a href="/" className="btn btn-nav ">
+            <Link href="/contact" className="btn btn-nav ">
               START YOUR PROJECT <CgArrowTopRight />
-            </a>
+            </Link>
           </div>
         </nav>
       </div>

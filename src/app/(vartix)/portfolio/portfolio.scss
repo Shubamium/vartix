@@ -63,17 +63,32 @@
   #model_slider {
     position: relative;
     .controls {
-      top: 50%;
+      bottom: 20%;
       position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: row-reverse;
       z-index: 50;
-      width: 100%;
+      gap: 2em;
+      background: red;
+      width: min(600px, 90%);
+
       .btn.ctr {
         background: var(--p);
         color: black;
-        padding: 4em 0;
+        padding: 1em;
         svg {
-          width: 50px;
-          height: 50px;
+          width: 80px;
+          height: 80px;
+          @media screen and (max-width: 420px) {
+            width: 40px;
+            height: 40px;
+          }
+          @media screen and (max-width: 550px) {
+            width: 50px;
+            height: 50px;
+          }
         }
 
         &.prev {
@@ -114,6 +129,9 @@
       justify-content: center;
       position: relative;
       height: 800px;
+      @media screen and (max-width: 550px) {
+        height: 500px;
+      }
       img {
         height: 800px;
         width: 800px;
@@ -122,9 +140,15 @@
         object-position: bottom;
         position: absolute;
         transition: all 1000ms ease-in-out;
-        transform-origin: bottom;
+        transform-origin: bottom left;
         user-select: none;
         pointer-events: none;
+
+        @media screen and (max-width: 550px) {
+          height: 500px;
+          width: 500px;
+        }
+        transform: translateX(-0%);
         &.center {
           z-index: 1;
         }

@@ -2,11 +2,13 @@ import React from "react";
 
 type Props = {};
 import "./process.scss";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaBluesky, FaXTwitter } from "react-icons/fa6";
 import { GoTriangleRight } from "react-icons/go";
 import { GrCheckmark } from "react-icons/gr";
 import InfiniteText from "@/app/(vartix)/components/InfiniteText";
 import SliderText from "@/app/(vartix)/components/sliderText/SliderText";
+import Link from "next/link";
+import { CgMail } from "react-icons/cg";
 export default function page({}: Props) {
   return (
     <main id="p_process">
@@ -44,14 +46,17 @@ export default function page({}: Props) {
                 quote for your 3D model.
               </p>
               <div className="socials">
-                <a href="#" className="btn btn-sc">
+                <a href="https://x.com/_vlightning" className="btn btn-sc">
                   <FaXTwitter />
                 </a>
-                <a href="#" className="btn btn-sc">
-                  <FaXTwitter />
+                <a href="mailto:vartix.3d@gmail.com" className="btn btn-sc">
+                  <CgMail />
                 </a>
-                <a href="#" className="btn btn-sc">
-                  <FaXTwitter />
+                <a
+                  href="https://bsky.app/profile/vlightning.bsky.social"
+                  className="btn btn-sc"
+                >
+                  <FaBluesky />
                 </a>
               </div>
             </div>
@@ -116,9 +121,9 @@ export default function page({}: Props) {
                 Once the rigging is complete and the model is fully paid, we’ll
                 deliver the final files to you, ready for use!
               </p>
-              <button className="btn btn-std">
+              <Link href="/contact" className="btn btn-std">
                 Start Your Project <GoTriangleRight />
-              </button>
+              </Link>
             </div>
           </div>
         </div>
