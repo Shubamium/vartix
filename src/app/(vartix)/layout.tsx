@@ -33,6 +33,7 @@ const banner =
   "https://shubastore.venmiart.com/api/public/dl/WU-VRzdt?inline=true";
 const url = "https://vartix3d.com";
 
+export const revalidate = 60;
 export const metadata: Metadata = {
   title: title,
 
