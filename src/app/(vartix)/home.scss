@@ -827,33 +827,37 @@
 
   #principle {
     display: grid;
-    grid-template-columns: 1.2fr 1.1fr;
-    max-width: 1920px;
+    grid-template-columns: 1.4fr 1.1fr;
+    max-width: min(1920px, 90%);
     margin: 0 auto;
     // max-width: 1920px;
 
-    gap: 4em;
+    gap: 2em;
     @include mq(1280px) {
       grid-template-columns: 1fr 2fr;
     }
-    @include mq(600px) {
+    @include mq(1080px) {
       grid-template-columns: 1fr;
+      gap: 0em;
     }
     .l {
+      // mask-image: linear-gradient(
+      //     to right,
+      //     transparent 10%,
+      //     white,
+      //     transparent
+      //   );
+      //   object-position: left;
+      //   @include mq(1280px) {
+      //     mask-image: none;
+      //   }
       img {
-        object-fit: cover;
+        object-fit: contain;
         width: 100%;
-        height: 100%;
-        mask-image: linear-gradient(
-          to right,
-          transparent 10%,
-          white,
-          transparent
-        );
-        object-position: left;
-        @include mq(1280px) {
-          mask-image: none;
-        }
+        // height: 100%;
+        height: 900px;
+        padding-top: 50px;
+        object-position: bottom;
       }
     }
 

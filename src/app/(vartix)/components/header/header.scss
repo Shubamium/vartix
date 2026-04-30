@@ -47,7 +47,8 @@
     top: 5%;
     right: 0%;
     z-index: 100;
-    mix-blend-mode: exclusion;
+    // mix-blend-mode: exclusion;
+    filter: drop-shadow(0px 0px 7px black);
     .nav {
       .top {
         display: flex;

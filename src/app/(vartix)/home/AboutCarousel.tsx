@@ -2,6 +2,7 @@
 import { Media } from "@/payload-types";
 import { AnimatePresence, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
+import { TiMediaPlayOutline } from "react-icons/ti";
 
 type Props = {
   ml: Media[];
@@ -27,6 +28,16 @@ export default function AboutCarousel({ ml }: Props) {
   //     };
   //   }
   // }, [active, activeRef]);
+  useEffect(() => {
+    const timeout = setInterval(() => {
+      setActive((curr) => {
+        return curr === ml.length - 1 ? 0 : curr + 1;
+      });
+    }, 3000);
+    return () => {
+      clearInterval(timeout);
+    };
+  }, [ml, active]);
   return (
     <>
       <AnimatePresence mode="popLayout">
@@ -61,6 +72,7 @@ export default function AboutCarousel({ ml }: Props) {
               }}
             >
               {" "}
+              _
             </button>
           );
         })}

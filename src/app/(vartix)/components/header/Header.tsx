@@ -74,8 +74,12 @@ export default function Header({}: Props) {
                   <FaBluesky />
                 </a>
                 <a href="https://vgen.co/VLightning" className="btn btn-social">
-                  <img src="/g/vgen.png" alt="" />
+                  <img
+                    src="/g/vgen.png"
+                    alt="
                   vgen.co/VLightning
+									"
+                  />
                 </a>
               </div>
             </div>

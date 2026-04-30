@@ -12,9 +12,6 @@ import { motion } from "motion/react";
 export default function Principle({}: Props) {
   return (
     <section id="principle">
-      <div className="l">
-        <img src="/g/halo.png" alt="" />
-      </div>
       <div className="r">
         <div className="point">
           <motion.div
@@ -83,6 +80,9 @@ export default function Principle({}: Props) {
           </motion.div>
           <p>Your Model, Your Way</p>
         </div>
+      </div>
+      <div className="l">
+        <img src="https://minio-api.venmiart.com/vartix/pointnew.webp" alt="" />
       </div>
     </section>
   );

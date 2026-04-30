@@ -88,12 +88,14 @@ export interface Config {
     home: Home;
     portfolio: Portfolio;
     career: Career;
+    process: Process;
     faq: Faq;
   };
   globalsSelect: {
     home: HomeSelect<false> | HomeSelect<true>;
     portfolio: PortfolioSelect<false> | PortfolioSelect<true>;
     career: CareerSelect<false> | CareerSelect<true>;
+    process: ProcessSelect<false> | ProcessSelect<true>;
     faq: FaqSelect<false> | FaqSelect<true>;
   };
   locale: null;
@@ -421,6 +423,16 @@ export interface Career {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "process".
+ */
+export interface Process {
+  id: string;
+  ourPriorityImage?: (string | null) | Media;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "faq".
  */
 export interface Faq {
@@ -503,6 +515,16 @@ export interface CareerSelect<T extends boolean = true> {
   imb?: T;
   imc?: T;
   apply_link?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "process_select".
+ */
+export interface ProcessSelect<T extends boolean = true> {
+  ourPriorityImage?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

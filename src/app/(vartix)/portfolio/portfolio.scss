@@ -140,7 +140,7 @@
         object-position: bottom;
         position: absolute;
         transition: all 1000ms ease-in-out;
-        transform-origin: bottom left;
+        transform-origin: center bottom;
         user-select: none;
         pointer-events: none;
 
@@ -152,29 +152,61 @@
         &.center {
           z-index: 1;
         }
+        // Left side - closer to center
         &.lc {
-          transform: translateX(-70%);
+          transform: translateX(-40%);
+          z-index: -30;
+          scale: 0.9;
+          filter: grayscale(0.7) brightness(70%);
+        }
+        // Left side - middle distance
+        &.lm {
+          transform: translateX(-85%);
           z-index: -50;
           scale: 0.9;
           filter: grayscale(0.7) brightness(70%);
         }
-        &.rc {
-          transform: translateX(70%);
-          z-index: -50;
-          scale: 0.9;
-          filter: grayscale(0.7) brightness(70%);
-        }
+        // Left side - far back
         &.lb {
-          transform: translateX(-30%);
+          transform: translateX(-90%);
           z-index: -100;
           scale: 0.7;
           filter: grayscale(1) brightness(30%);
         }
+        // Left back - wrapping from back
+        &.bl {
+          transform: translateX(-100%);
+          z-index: -120;
+          scale: 0.5;
+          filter: grayscale(1) brightness(10%);
+        }
+        // Right side - closer to center
+        &.rc {
+          transform: translateX(40%);
+          z-index: -30;
+          scale: 0.9;
+          filter: grayscale(0.7) brightness(70%);
+        }
+        // Right side - middle distance
+        &.rm {
+          transform: translateX(85%);
+          z-index: -50;
+          scale: 0.9;
+          filter: grayscale(0.7) brightness(70%);
+        }
+        // Right side - far back
         &.rb {
-          transform: translateX(30%);
+          transform: translateX(90%);
           z-index: -100;
           scale: 0.7;
           filter: grayscale(1) brightness(30%);
+        }
+        // Right back - wrapping from back
+        &.br {
+          transform: translateX(100%);
+          z-index: -120;
+          scale: 0.5;
+          filter: grayscale(1) brightness(10%);
         }
         &.off {
           transform: translateX(00%);

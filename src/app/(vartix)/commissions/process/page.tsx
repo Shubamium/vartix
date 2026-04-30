@@ -9,7 +9,19 @@ import InfiniteText from "@/app/(vartix)/components/InfiniteText";
 import SliderText from "@/app/(vartix)/components/sliderText/SliderText";
 import Link from "next/link";
 import { CgMail } from "react-icons/cg";
-export default function page({}: Props) {
+import { getPayload } from "payload";
+import payloadConfig from "@/payload.config";
+import { Media } from "@/payload-types";
+export default async function page({}: Props) {
+  const p = await getPayload({
+    config: await payloadConfig,
+  });
+
+  const pd = await p.findGlobal({
+    slug: "process",
+  });
+
+  const priorityImg = pd?.ourPriorityImage as Media;
   return (
     <main id="p_process">
       <div className="wire"></div>
@@ -131,7 +143,7 @@ export default function page({}: Props) {
       <section id="priority">
         <img src="/d/prio.png" alt="" className="dprio" />
         <div className="l">
-          <img src="/g/placeholder2.png" alt="" />
+          <img src={priorityImg.url ?? undefined} alt="" />
         </div>
         <div className="r">
           <div className="panel">

@@ -14,6 +14,7 @@ import Home from "./collections/globals/Home";
 import Career from "./collections/globals/Career";
 import FAQ from "./collections/globals/FAQ";
 import Portfolio from "./collections/globals/Portfolio";
+import Process from "./collections/globals/Process";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -26,7 +27,7 @@ export default buildConfig({
     },
   },
   collections: [Users, Media],
-  globals: [Home, Portfolio, Career, FAQ],
+  globals: [Home, Portfolio, Career, Process, FAQ],
 
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
