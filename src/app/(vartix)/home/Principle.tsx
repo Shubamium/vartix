@@ -4,7 +4,7 @@ import React from "react";
 type Props = {};
 import { FaArrowRight, FaList, FaListCheck } from "react-icons/fa6";
 import Link from "next/link";
-import { FaCog, FaCogs, FaPaintBrush } from "react-icons/fa";
+import { FaCog, FaCogs, FaPaintBrush, FaTools } from "react-icons/fa";
 import { PiHandshakeBold } from "react-icons/pi";
 import { BsChatDotsFill } from "react-icons/bs";
 import { CgSandClock } from "react-icons/cg";
@@ -20,9 +20,9 @@ export default function Principle({}: Props) {
             dragElastic
             className="drag"
           >
-            <FaCog />
+            <FaListCheck />
           </motion.div>{" "}
-          <p>Responsive. Reliable. Easy to Work With.</p>
+          <p>When you’re happy, we’re happy too</p>
         </div>
         <div className="point">
           <motion.div
@@ -31,9 +31,12 @@ export default function Principle({}: Props) {
             dragElastic
             className="drag"
           >
-            <FaListCheck />
+            <FaCog />
           </motion.div>{" "}
-          <p>Your Feedback Shapes the Final Result.</p>
+          <p>
+            We believe quality isn’t just something you see - it’s something you
+            feel
+          </p>
         </div>
         <div className="point">
           <motion.div
@@ -44,7 +47,7 @@ export default function Principle({}: Props) {
           >
             <PiHandshakeBold />
           </motion.div>
-          <p>Flexible Pricing. Flexible Plans.</p>
+          <p> Clear workflow, constant communication</p>
         </div>
         <div className="point">
           <motion.div
@@ -56,7 +59,7 @@ export default function Principle({}: Props) {
             <BsChatDotsFill />
           </motion.div>
 
-          <p>Constant Communication, Clear Workflow .</p>
+          <p>Your feedback matters</p>
         </div>
         <div className="point">
           <motion.div
@@ -67,7 +70,18 @@ export default function Principle({}: Props) {
           >
             <CgSandClock />
           </motion.div>
-          <p>We Respect Your Deadline.</p>
+          <p>Hand-painted textures in your model's style</p>
+        </div>
+        <div className="point">
+          <motion.div
+            drag
+            dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
+            dragElastic
+            className="drag"
+          >
+            <FaTools />
+          </motion.div>
+          <p>We know what works in practice, not just in theory</p>
         </div>
         <div className="point">
           <motion.div
@@ -78,7 +92,7 @@ export default function Principle({}: Props) {
           >
             <FaPaintBrush />
           </motion.div>
-          <p>Your Model, Your Way</p>
+          <p> We build models with both beauty and functionality in mind</p>
         </div>
       </div>
       <div className="l">

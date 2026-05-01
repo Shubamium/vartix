@@ -138,13 +138,14 @@
       }
     }
     .r {
-      max-height: 950px;
+      height: 100%;
       display: flex;
       justify-content: flex-end;
       @include mq(1280px) {
         max-width: 100%;
       }
       img {
+        max-width: 40vw;
         height: 100%;
         object-fit: cover;
         @include mq(1280px) {

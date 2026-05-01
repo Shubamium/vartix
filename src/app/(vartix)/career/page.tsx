@@ -73,28 +73,22 @@ export default async function page({}: Props) {
         <div className="rowtext">
           <div className="l">
             <p>
-              We’re always on the lookout for passionate, talented artists and
-              collaborators who love bringing characters to life just as much as
-              we do.{" "}
+              We’re always excited to meet talented people who love creating and
+              bringing characters to life!
             </p>
             <p>
-              Whether you’re a 3D modeler, rigger, texture artist, animator, or
-              technical expert — if you care about quality and love working in a
-              creative, friendly environment, we’d love to hear from you!
+              We believe the best results come from passionate people who care
+              about their work. We create a space where people feel supported,
+              creative, and able to do their best work! Clear communication,
+              mutual respect, and attention to detail are at the core of
+              everything we do
             </p>
           </div>
           <div className="r">
             <p>
-              At our studio, we value clear communication, creative freedom, and
-              a strong sense of teamwork. Every project is a collaboration, and
-              we believe in supporting each other to grow and create amazing
-              work together.
-            </p>
-            <p>
-              If you're interested in working with us, please{" "}
-              <strong>feel free to reach out</strong>
-              with your portfolio, experience, and a little bit about yourself.
-              We can’t wait to see what you can bring to the team!
+              If you’re reliable and committed to high-quality work, you’ll feel
+              at home here! We can’t wait to see what you can bring to the team!
+              {`:)`}
             </p>
           </div>
         </div>

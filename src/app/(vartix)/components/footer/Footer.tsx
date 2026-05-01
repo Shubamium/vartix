@@ -25,15 +25,12 @@ export default function Footer({}: Props) {
           </div>
           <h2>VARTIX</h2>
           <p>
-            We are Vartix, a 3D modeling studio that specializes in creating 3D
-            models for VTubers. Our primary focus is in creating 3D models that
-            look 2D, ensuring they are as close to their 2D references as
-            possible.{" "}
+            We are Vartix - a 3D modeling studio focused on quality and a
+            comfortable, friendly environment. Every project is unique to us,
+            and we care that every model is completed to the highest quality.
+            Your ideas, and feedback are truly important to us!
           </p>
-          <p>
-            However, we are also capable of working with any type of 3D
-            models.{" "}
-          </p>
+          <p></p>
 
           <p className="attrib"> ©2025 VARTIX 3D - All rights reserved. </p>
         </div>
@@ -68,9 +65,8 @@ export default function Footer({}: Props) {
           <div className="fsocials">
             <h2>GET IN TOUCH</h2>
             <p>
-              We’d love to hear from you! Whether you’re ready to start a
-              project, want a quote, or just have a few questions — feel free to
-              reach out.
+              Have a project in mind or just a quick question? We’re always
+              happy to chat - feel free to reach out
             </p>
             <div className="fs-list">
               <a href="mailto:vartix.3d@gmail.com" className="btn btn-fs">

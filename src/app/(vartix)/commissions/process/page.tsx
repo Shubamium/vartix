@@ -2,7 +2,7 @@ import React from "react";
 
 type Props = {};
 import "./process.scss";
-import { FaBluesky, FaXTwitter } from "react-icons/fa6";
+import { FaBluesky, FaDiscord, FaXTwitter } from "react-icons/fa6";
 import { GoTriangleRight } from "react-icons/go";
 import { GrCheckmark } from "react-icons/gr";
 import InfiniteText from "@/app/(vartix)/components/InfiniteText";
@@ -12,6 +12,7 @@ import { CgMail } from "react-icons/cg";
 import { getPayload } from "payload";
 import payloadConfig from "@/payload.config";
 import { Media } from "@/payload-types";
+import { BsDiscord } from "react-icons/bs";
 export default async function page({}: Props) {
   const p = await getPayload({
     config: await payloadConfig,
@@ -64,11 +65,18 @@ export default async function page({}: Props) {
                 <a href="mailto:vartix.3d@gmail.com" className="btn btn-sc">
                   <CgMail />
                 </a>
+
                 <a
                   href="https://bsky.app/profile/vlightning.bsky.social"
                   className="btn btn-sc"
                 >
                   <FaBluesky />
+                </a>
+                <a
+                  href="https://bsky.app/profile/vlightning.bsky.social"
+                  className="btn btn-sc"
+                >
+                  <BsDiscord /> <span> v_lightning</span>
                 </a>
               </div>
             </div>
@@ -94,17 +102,18 @@ export default async function page({}: Props) {
               </p>
               <div className="stages">
                 <div className="stage">
-                  <h3>1.Modeling of the 3D mesh </h3>
+                  <h3>1.3D modeling</h3>
                 </div>
                 <div className="stage">
                   <h3>2.Texturing </h3>
                 </div>
                 <div className="stage">
                   <h3>
-                    3.Rigging, adding facial blendshapes, and conversion to
-                    different formats{" "}
+                    3.Rigging the model, adding facial blendshapes, setting up
+                    materials, physics, colliders, and converting the avatar
+                    into different formats{" "}
                   </h3>
-                  <h3 className="smol">(VRM, VSFAvatar, VRChat)</h3>
+                  <h3 className="smol">(VRM, VSFAvatar, VRChat, Warudo)</h3>
                 </div>
               </div>
               <p>
@@ -168,16 +177,16 @@ export default async function page({}: Props) {
               </span>
             </h2>
             <p>
-              We’re a friendly and easy-to-work-with team! We’re always happy to
-              answer any questions you have! Throughout the whole process, we
-              provide regular updates so you always know what stage your model
-              is at.
+              We're a friendly and easy-to-work-with team! We're always happy to
+              answer any questions you have! Throughout the whole process, we're
+              here to provide you with regular updates, so you can clearly see
+              where your model is in the process
             </p>
             <p>
-              Our workflow is clear and transparent — we want you to feel
-              confident and involved every step of the way! Your ideas matter to
-              us, and we do our best to make the process smooth, stress-free,
-              and enjoyable!
+              We have a very clear and transparent workflow, and we want you to
+              feel confident and involved throughout the whole process! Your
+              ideas are important to us, and we do our best to make the process
+              is enjoyable for you!
             </p>
           </div>
         </div>
@@ -204,10 +213,12 @@ export default async function page({}: Props) {
             </div>
             <h2>Consistent Quality</h2>
             <p>
-              We focus on bringing your ideas to life while maintaining
-              high-quality standards from start to finish. Each project goes
-              through clear steps with regular updates, quality checks, and
-              attention to detail at every stage
+              At our studio, quality isn’t an option - it’s a standard. At every
+              stage of production, every model is subjected to systematic
+              quality checks to make sure it satisfies the high standard we are
+              dedicated to delivering. <br />
+              <br /> You can be sure that your model will be made with care,
+              strong quality, and attention to detail when you work with us.
             </p>
 
             <div className="points">
@@ -256,10 +267,26 @@ export default async function page({}: Props) {
             </div>
             <h2>Great Communication</h2>
             <p>
-              We believe communication is key to a smooth and enjoyable
-              experience. Whether you're new to commissioning a model or a
-              returning client, we make sure you always feel heard and
-              supported.
+              We value communication throughout the entire process. You will
+              always have friendly managers available to help you at any stage
+              of your project. We’re always happy to provide you guidance,
+              recommendations, or assistance in figuring out what you need based
+              on how you plan to use your model. We are here to support you!
+              <br />
+              <br />
+              You will get regular updates on your model’s progress, and we are
+              always ready to answer any questions you may have. We believe the
+              process should feel open and collaborative, so you always know
+              what stage your model is in
+              <br />
+              <br />
+              At the end of each stage of the process, you’ll receive renders of
+              your 3D model from multiple angles for your feedback/approval
+              <br />
+              <br />
+              The thing that matters the most to us is you and what you need. We
+              care about your ideas and your questions. We want to make sure
+              your model truly feels like yours.”
             </p>
 
             <div className="points">
@@ -316,12 +343,19 @@ export default async function page({}: Props) {
                 </defs>
               </svg>
             </div>
-            <h2>Flexible Art Styles</h2>
+            <h2>Flexible Artstyles</h2>
             <p>
-              We’ve worked on many different types of models, so we can match
-              the style you’re looking for — from cute and stylized to techy,
-              realistic, or fantasy. Just tell us your vision, and we’ll help
-              bring it to life.
+              We’re very flexible with art styles. Our team has talented artists
+              who can adapt to your character’s style and bring it into 3D as
+              faithfully as possible. This attention to style is important at
+              every stage: from modeling to texturing and material setup.
+              <br />
+              <br />
+              Every design is different, and we take the time to carefully study
+              and adapt to your character’s style so it looks its best in 3D.
+              We’re always excited to work with creative and unique concepts,
+              and we love learning more about your ideas. Our team is always
+              here to listen and help bring your vision to life.
             </p>
 
             <div className="points">

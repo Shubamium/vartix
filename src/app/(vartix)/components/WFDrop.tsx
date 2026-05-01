@@ -7,7 +7,12 @@ type Props = { h: string; d: React.ReactNode };
 export default function WFDrop({ h, d }: Props) {
   const [open, setOpen] = useState(false);
   return (
-    <div className={`drd ${open ? "open" : ""}`}>
+    <div
+      className={`drd ${open ? "open" : ""}`}
+      onClick={() => {
+        setOpen(!open);
+      }}
+    >
       <div className="top">
         <h2>{h}</h2>
         <button

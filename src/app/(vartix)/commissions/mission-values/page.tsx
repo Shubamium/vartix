@@ -17,13 +17,15 @@ export default function page({}: Props) {
           craftsmanship.
         </h2>
         <p>
-          We know how important your model is — whether it's for streaming,
-          storytelling, or game development — and we’re here to make sure it
-          feels uniquely yours.
+          Everything we do comes down to one goal:{" "}
+          <strong>
+            bringing your characters to life in the best way possible
+          </strong>
         </p>
         <p>
-          Every model we create is built from scratch with attention to detail,
-          high-quality standards, and a deep respect for your vision.
+          We understand how important your model is - and we want it to feel
+          truly yours. Every model we create is built from scratch, with a
+          strong focus on quality and staying true to your vision!
         </p>
         <img src="/d/bgchal.png" alt="" className="bgchar l" />
         <img src="/d/bgchar.png" alt="" className="bgchar r" />
@@ -59,34 +61,33 @@ export default function page({}: Props) {
         </div>
         <div className="pl">
           <div className="prin">
-            <h2>💗 Client-Centered Approach</h2>
+            <h2>💗 Working Together</h2>
             <p>
-              We treat every project like a collaboration. Your feedback shapes
-              the final result, and we’re always here to answer questions, offer
-              guidance, and support your ideas.
+              We see every project as a collaboration - we’re working on your
+              model together! We always listen to your feedback. We’re always
+              here to answer questions and help guide you through the process
             </p>
             <div className="prin">
-              <h2>🎨 Creativity & Customization</h2>
+              <h2>🎨 Creative & Unique</h2>
               <p>
-                No two models are the same. We embrace variety, support all
-                kinds of designs and love bringing original concepts to life.
+                Every model we make is unique! We absolutely love working with
+                all kinds of designs and bringing original ideas to life
               </p>
             </div>
             <div className="prin">
-              <h2>🎯 Quality & Care</h2>
+              <h2>🎯 Attention to Detail</h2>
               <p>
-                From clean topology to expressive blendshapes, we put care into
-                every detail. We don’t cut corners, and we always aim for models
-                that are beautiful, functional, and optimized!
+                We care about the small details. We thoroughly test your model
+                to make sure it feels polished. We take the time to get even the
+                smallest details right on every stage of the process
               </p>
             </div>
             <div className="prin">
-              <h2>📢 Clear Communication</h2>
+              <h2>📢 Open Communication</h2>
               <p>
-                We believe the best results come from open and honest
-                communication. That’s why we keep you updated throughout the
-                entire process, with previews, progress updates, and full
-                transparency.
+                We keep things clear and transparent. You’ll get regular
+                updates, previews, and always know what stage your model is at.
+                We always answer any questions that you may have
               </p>
             </div>
           </div>

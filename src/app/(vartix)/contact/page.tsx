@@ -34,12 +34,17 @@ export default function page({}: Props) {
               </svg>
             </span>
           </h2>
+          <p className="desc">We’d love to hear from you! :D</p>
           <p className="desc">
-            We’d love to hear from you! Whether you’re ready to start a project,
-            want a quote, or just have a few questions — feel free to reach out.{" "}
+            If you're looking for a custom 3D model, have any questions, or just
+            want to explore ideas, feel free to reach out!
           </p>
           <p className="desc">
-            We’re always happy to chat and help guide you through the process.
+            We believe great results come from clear communication, so don’t
+            hesitate to ask anything along the way
+          </p>
+          <p className="desc">
+            Reach out anytime - we’re happy to help and guide you along the way!
           </p>
 
           <section className="cpart">

@@ -16,14 +16,15 @@ const wfList = [
     d: (
       <>
         <p>
-          We start with 3D modeling, where we create a detailed and accurate
-          mesh based on your reference. The model is made with clean, optimized
-          topology, making it easy to rig, animate, and compatible with
-          different platforms
+          We start with 3D modeling the character. Matching your character's
+          reference comes before anything else during this stage. From each
+          angle, the models are reviewed so they feel real in 3 dimensions.
         </p>
         <p>
-          Everything is designed from scratch to match your character’s
-          proportions and overall style.
+          We also optimize the topology to make the rigging work smoothly in
+          later stages. We're experienced in the VTubing field, so we use some
+          specific techniques to improve the quality of the model in later
+          stages.
         </p>
       </>
     ),
@@ -31,40 +32,79 @@ const wfList = [
   {
     h: "🎨 UV Mapping & Texturing",
     d: (
-      <p>
-        Next comes UV mapping and texturing. The model is carefully unwrapped
-        for efficient texture painting. We hand-paint the textures to match your
-        2D art as closely as possible, paying close attention to small details,
-        color balance, and overall mood.
-      </p>
+      <>
+        <p>
+          Next comes UV mapping and texturing. We carefully unwrap the model to
+          make sure the texturing is both efficient and correct - proper UVs
+          help prevent visible seams/texture distortion.
+        </p>
+        <p>
+          All textures are hand-painted to match your 2D artwork as closely as
+          possible. We put a lot of care into making sure the style is as close
+          as possible to the reference
+        </p>
+      </>
     ),
   },
   {
     h: "🦴 Rigging & Weight Painting",
     d: (
-      <p>
-        Then we move on to rigging and weight painting. We create a full
-        humanoid skeleton, along with extra bones for dynamic parts like hair,
-        clothing, tails, and more. Weight painting is done by hand and
-        thoroughly tested to make sure the model moves smoothly and naturally.
-      </p>
+      <>
+        <p>
+          Next up comes rigging and weight painting We create a full humanoid
+          skeleton and add extra bones for moving parts such as hair, clothing,
+          tails, and other accessories. We analyze your character's design and
+          rig appropriately for it
+        </p>
+        <p>
+          We then thoroughly test the model to minimize clipping and adjust the
+          weights until the results feel smooth. Thanks to our experience in the
+          VTubing field, we have proven rigging techniques to improve the
+          movements of the models
+        </p>
+      </>
     ),
   },
   {
     h: "😄 Facial Blendshapes",
     d: (
       <p>
-        Once the rig is in place, we create facial blendshapes based on the
-        expressions you chose at the start. These can include ARKit blendshapes
-        for iPhone face tracking, vowels for lip-syncing, and any custom
-        expressions you’d like your model to have.
+        We create a facial blendshapes set of your choice What we aim for is
+        letting your model show emotion fully! Each character's facial
+        blendshapes are different to match your character's personality and
+        design
       </p>
     ),
   },
   {
     h: "⚙️ Unity Setup & Format Conversion",
-    d: "Finally, we prepare your model in Unity. We set up the appropriate shaders, create toggles and animations, and export the model in your chosen formats — whether that’s VRM, VSFAvatar, Warudo, or VRChat. Everything is packaged and tested so your model is ready to use right away!",
+    d: (
+      <p>
+        Finally, we set up your model in Unity and convert it into your chosen
+        formats We set up the materials, animations, physics, colliders,
+        toggles, and expressions. Everything is tested to make sure the model
+        looks perfect and is ready to use right away!
+      </p>
+    ),
   },
+];
+
+const values = [
+  "Quality First",
+  "Customer Satisfaction",
+  "Passion for Creativity",
+  "Wide Art Style Range",
+  "Friendly Communication",
+  "Ready-to-Use Delivery",
+  "Respect for your vision",
+  "Care at every step",
+  "Premium Standards",
+  "Tried & Tested Workflow",
+  "Years of Experience",
+  "Professional Know-How",
+  "Expressive Models",
+  "Advanced Shader Work",
+  "Hand-Painted Textures",
 ];
 export default async function Home() {
   const config = await payloadConfig;
@@ -156,22 +196,24 @@ export default async function Home() {
                 </h2>
 
                 <p>
-                  We’ve been creating 3D VTuber models for years and love
-                  helping people bring their ideas to life. Your model will be
-                  created by a team of skilled professionals who are passionate
-                  about bringing your vision to . Our experience means we know
-                  how to make models that don’t just look great but also work
-                  perfectly for you. We’re always learning and keeping up with
-                  the latest technology to make sure your model is the best it
-                  can be!
+                  For years now, our work has focused on building 3D VTuber
+                  models - and we truly enjoy helping people bring their ideas
+                  to life! ^^ Each model is made by a team of skilled artists
+                  who care about turning your vision into a high-quality result.
+                  Quality isn’t just seen - it’s felt. We focus on the smallest
+                  details and movements.
                 </p>
                 <p>
-                  Your happiness means everything to us. We’ll keep you involved
-                  every step of the way, making sure every detail is just right,
-                  so your model feels truly yours. When you’re happy, we’re
-                  happy too!
+                  We're always learning - tools evolve, so do we, picking up new
+                  methods, to make sure your model is the best it can be!
                 </p>
                 <p>
+                  What matters most? You being happy! From start to finish, we
+                  keep you involved throughout the entire process. Your
+                  completed model isn’t just accurate - it sits right with who
+                  you are
+                  <br />
+                  <br />
                   <strong>When you’re happy, we’re happy too!</strong>
                 </p>
               </article>
@@ -372,6 +414,39 @@ export default async function Home() {
               </div>
               <div className="r">
                 <div className="elevator">
+                  {values?.map((v, _) => {
+                    return (
+                      <div className="lift" key={"value" + _ + v}>
+                        <h2>{v}</h2>
+                      </div>
+                    );
+                  })}
+                  {values?.map((v, _) => {
+                    return (
+                      <div className="lift" key={"valueb" + _ + v}>
+                        <h2>{v}</h2>
+                      </div>
+                    );
+                  })}
+
+                  {/* <div className="lift">
+                    <h2>We Build Around Your Vision</h2>
+                  </div>
+                  <div className="lift">
+                    <h2>Quick Communication</h2>
+                  </div>
+                  <div className="lift">
+                    <h2>Delivered in Formats that you need</h2>
+                  </div>{" "}
+                  <div className="lift">
+                    <h2>Wide Art Style Range</h2>
+                  </div>
+                  <div className="lift">
+                    <h2>We Build Around Your Vision</h2>
+                  </div>
+                  <div className="lift">
+                    <h2> Ready to Import & Usee</h2>
+                  </div>
                   <div className="lift">
                     <h2>CLEAN TOPOLOGY, ALWAYS</h2>
                   </div>
@@ -393,7 +468,6 @@ export default async function Home() {
                   <div className="lift">
                     <h2> Ready to Import & Usee</h2>
                   </div>
-                  {/* 2 */}
                   <div className="lift">
                     <h2>CLEAN TOPOLOGY, ALWAYS</h2>
                   </div>
@@ -414,29 +488,7 @@ export default async function Home() {
                   </div>
                   <div className="lift">
                     <h2> Ready to Import & Usee</h2>
-                  </div>
-                  {/* 3 */}
-                  <div className="lift">
-                    <h2>CLEAN TOPOLOGY, ALWAYS</h2>
-                  </div>
-                  <div className="lift">
-                    <h2>We Build Around Your Vision</h2>
-                  </div>
-                  <div className="lift">
-                    <h2>Quick Communication</h2>
-                  </div>
-                  <div className="lift">
-                    <h2>Delivered in Formats that you need</h2>
-                  </div>{" "}
-                  <div className="lift">
-                    <h2>Wide Art Style Range</h2>
-                  </div>
-                  <div className="lift">
-                    <h2>We Build Around Your Vision</h2>
-                  </div>
-                  <div className="lift">
-                    <h2> Ready to Import & Usee</h2>
-                  </div>
+										</div> */}
                 </div>
               </div>
             </div>
