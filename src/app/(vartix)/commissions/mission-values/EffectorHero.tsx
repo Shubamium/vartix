@@ -31,19 +31,23 @@ export default function EffectorHero({}: Props) {
   const springX = useSpring(x, { stiffness: 300, damping: 45, mass: 1 });
   const springY = useSpring(y, { stiffness: 300, damping: 45, mass: 1 });
 
-  const charX = useTransform(springX, [0, 1], [20, -20]);
-  const charY = useTransform(springY, [0, 1], [20, -20]);
+  const charX = useTransform(springX, [0, 1], [80, -40]);
+  const charY = useTransform(springY, [0, 1], [-100, -140]);
 
-  const bdX = useTransform(springX, [0, 1], [-70, 70]);
-  const bdY = useTransform(springY, [0, 1], [-70, 70]);
+  const lX = useTransform(springX, [0, 1], [220, -220]);
+  const lY = useTransform(springY, [0, 1], [110, -110]);
 
   const vdX = useTransform(springX, [0, 1], [100, -100]);
   const vdY = useTransform(springY, [0, 1], [100, -100]);
   const vdBX = useTransform(springX, [0, 1], [130, -130]);
   const vdBY = useTransform(springY, [0, 1], [130, -130]);
 
-  const dashX = useTransform(springX, [-0.5, 1], [80, -80]);
-  const dashY = useTransform(springY, [0, 1], [80, -80]);
+  const cubeX = useTransform(springX, [-0.5, 1], [-300, 300]);
+  const cubeY = useTransform(springY, [0, 1], [-150, -100]);
+
+  const rX = useTransform(springX, [0, 1], [-50, -500]);
+  const rY = useTransform(springY, [0, 1], [110, -110]);
+
   return (
     <section id="hero">
       <div className="heading">
@@ -116,10 +120,35 @@ export default function EffectorHero({}: Props) {
       </div>
 
       <div className="effecter">
-        <MouseMoveScale className="char" offset={7}>
+        <div className="left-char">
           <motion.img
-            src="/d/3dplace.png"
-            className="char"
+            src="/g/l_samurai.png"
+            alt=""
+            // style={{
+            //   translate: `${mos[0] * -50}px  ${mos[1] * -50}px`,
+            // }}
+            style={{
+              x: lX,
+              y: lY,
+            }}
+          />
+        </div>
+        <div className="right-char">
+          <motion.img
+            src="/g/r_sailor.png"
+            alt=""
+            // style={{
+            //   translate: `${mos[0] * -50}px  ${mos[1] * -50}px`,
+            // }}
+            style={{
+              x: rX,
+              y: rY,
+            }}
+          />
+        </div>
+        <div className="center-char">
+          <motion.img
+            src="/g/m_panda.png"
             alt=""
             // style={{
             //   translate: `${mos[0] * -50}px  ${mos[1] * -50}px`,
@@ -129,20 +158,28 @@ export default function EffectorHero({}: Props) {
               y: charY,
             }}
           />
-        </MouseMoveScale>
-        <MouseMoveScale className="backdrop" offset={0.5}>
+        </div>
+        <motion.img
+          src={"/d/cube.png"}
+          className="cube"
+          style={{
+            x: cubeX,
+            y: cubeY,
+          }}
+        />
+        {/* <MouseMoveScale className="backdrop" offset={0.5}>
           <motion.div
             style={{
               x: bdX,
               y: bdY,
             }}
           ></motion.div>
-        </MouseMoveScale>
-        <motion.div
+        </MouseMoveScale> */}
+        {/* <motion.div
           style={{ x: dashX, y: dashY }}
           className="stroke"
-        ></motion.div>
-        <motion.video
+        ></motion.div> */}
+        {/* <motion.video
           src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
           autoPlay
           loop
@@ -152,9 +189,9 @@ export default function EffectorHero({}: Props) {
             x: vdX,
             y: vdY,
           }}
-        ></motion.video>
+        ></motion.video> */}
 
-        <motion.video
+        {/* <motion.video
           src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
           autoPlay
           loop
@@ -164,7 +201,10 @@ export default function EffectorHero({}: Props) {
             x: vdBX,
             y: vdBY,
           }}
-        ></motion.video>
+        ></motion.video> */}
+      </div>
+      <div className="bg-replace">
+        <img src="/g/all.png" alt="" className="al" />
       </div>
     </section>
   );
