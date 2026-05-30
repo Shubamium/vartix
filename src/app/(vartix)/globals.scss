@@ -115,6 +115,37 @@ a {
     }
   }
 }
+.slider-text-marquee {
+  height: 80px;
+  background: var(--g);
+  color: black;
+  display: flex;
+  gap: 2em;
+  .point {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding: 0% 1em;
+    text-transform: uppercase;
+    .box {
+      width: 50px;
+      height: 50px;
+      background: black;
+    }
+  }
+  p {
+    letter-spacing: -0.05em;
+    font-size: 4rem;
+    font-weight: lighter;
+  }
+  @include mq(1024px) {
+    height: 50px;
+  }
+  @include mq(420px) {
+    height: 40px;
+  }
+}
 
 .infinitext {
   font-size: 10rem;

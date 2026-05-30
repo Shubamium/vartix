@@ -100,7 +100,7 @@ type ShowcaseProps = {
 };
 const Showcase = ({ wl }: ShowcaseProps) => {
   return (
-    <div className="showcase">
+    <div className={`showcase ${wl.topaspect ? "square" : ""}`}>
       {/* <img
         src="/d/imload.gif"
         alt=""
@@ -109,8 +109,8 @@ const Showcase = ({ wl }: ShowcaseProps) => {
       /> */}
       <MediaRender media={wl.top} className="display it" />
       <div className="bottom">
-        <MediaRender media={wl.bl} className="display ibl" />
         <MediaRender media={wl.br} className="display ibr" />
+        <MediaRender media={wl.bl} className="display ibl" />
       </div>
     </div>
   );

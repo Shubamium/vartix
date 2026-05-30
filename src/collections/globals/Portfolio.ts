@@ -21,6 +21,14 @@ const Portfolio: GlobalConfig = {
           relationTo: "media",
         },
         {
+          name: "topaspect",
+          type: "checkbox",
+          label: "Square Top Media",
+          admin: {
+            description: "Check to set the top media to 1:1 Aspect Ratio",
+          },
+        },
+        {
           name: "bl",
           label: "Bottom Left",
           type: "upload",

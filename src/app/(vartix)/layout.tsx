@@ -8,6 +8,7 @@ import Footer from "./components/footer/Footer";
 import LoadingScreen from "./components/loading/LoadingScreen";
 import CustomCursor from "./components/cusCursor/CustomCursor";
 const m = Manrope({
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 

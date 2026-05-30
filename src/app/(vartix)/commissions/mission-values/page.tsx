@@ -11,15 +11,12 @@ export default function page({}: Props) {
       <section id="mission">
         <img src="/g/logo_m.png" alt="" className="logo" />
         {/* <p></p> */}
-        <h2 className="sh">At the heart of our studio is a simple mission:</h2>
-        <h2 className="h">
-          To bring your characters to life with care, creativity, and
-          craftsmanship.
-        </h2>
+        {/* <h2 className="sh">At the heart of our studio is a simple mission:</h2> */}
+        <h2 className="h">Make It Real</h2>
         <p>
-          Everything we do comes down to one goal:{" "}
+          {/* Everything we do comes down to one goal:{" "} */}
           <strong>
-            bringing your characters to life in the best way possible
+            Bringing your characters to life in the best way possible
           </strong>
         </p>
         <p>

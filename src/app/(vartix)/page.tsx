@@ -369,16 +369,16 @@ export default async function Home() {
 
           <section id="achieve">
             <div className="point">
-              <h2 className="num">40+</h2>
-              <p>TITLE HERE</p>
+              <h2 className="num">200+</h2>
+              <p>Completed Commissions</p>
             </div>
             <div className="point">
-              <h2 className="num">40+</h2>
-              <p>TITLE HERE</p>
+              <h2 className="num">24/7</h2>
+              <p>Passion for Art</p>
             </div>
             <div className="point">
-              <h2 className="num">40+</h2>
-              <p>TITLE HERE</p>
+              <h2 className="num">20K+</h2>
+              <p>Cups of coffee</p>
             </div>
           </section>
 

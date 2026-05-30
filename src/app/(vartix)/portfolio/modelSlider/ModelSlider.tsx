@@ -132,11 +132,13 @@ export default function ModelSlider({ il }: Props) {
       <div className="controls">
         {/* Previous button (left chevron) */}
         <button className="btn ctr prev" onClick={handlePreviousImage}>
-          <BiChevronLeft />
+          {/* <BiChevronLeft /> */}
+          <img src="/d/arr2.webp" alt="" />
         </button>
         {/* Next button (right chevron) */}
         <button className="btn ctr next" onClick={handleNextImage}>
-          <BiChevronRight />
+          <img src="/d/arr2.webp" alt="" />
+          {/* <BiChevronRight /> */}
         </button>
       </div>
       <div className="scroller">

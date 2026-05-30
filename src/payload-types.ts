@@ -399,6 +399,10 @@ export interface Portfolio {
   wl?:
     | {
         top?: (string | null) | Media;
+        /**
+         * Check to set the top media to 1:1 Aspect Ratio
+         */
+        topaspect?: boolean | null;
         bl?: (string | null) | Media;
         br?: (string | null) | Media;
         id?: string | null;
@@ -497,6 +501,7 @@ export interface PortfolioSelect<T extends boolean = true> {
     | T
     | {
         top?: T;
+        topaspect?: T;
         bl?: T;
         br?: T;
         id?: T;
