@@ -193,6 +193,37 @@
       }
     }
   }
+
+  #homenav {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    margin: 2em 0;
+    justify-content: center;
+    max-width: 100%;
+    flex-wrap: wrap;
+    .btn-nav {
+      font-size: 3.2rem;
+      background: var(--p);
+      color: black;
+      padding: 0.2em 0.5em;
+      font-weight: bold;
+
+      @media screen and (max-width: 1280px) {
+        font-size: 2.5rem;
+      }
+      @media screen and (max-width: 1024px) {
+        font-size: 1.4rem;
+      }
+      outline: 1px solid var(--g);
+      outline-offset: 5px;
+      &:hover {
+        background: var(--g);
+        clip-path: polygon(0 0, 93% 0, 100% 6%, 100% 100%, 4% 100%, 0 95%);
+        // clip-path: polygon(0 0, 86% 0, 100% 10%, 100% 100%, 11% 100%, 0 91%);
+      }
+    }
+  }
   #us {
     height: 1080px;
     background: url("/b/fox_5.png");

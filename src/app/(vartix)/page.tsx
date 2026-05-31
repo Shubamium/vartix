@@ -180,6 +180,20 @@ export default async function Home() {
         </div>
       </section>
 
+      <div id="homenav">
+        <Link href="/commissions" className="btn btn-nav">
+          PORTFOLIO
+        </Link>
+        <Link href="/contact" className="btn btn-nav">
+          CONTACT
+        </Link>
+        <Link href="/FAQ" className="btn btn-nav">
+          FAQ
+        </Link>
+        <Link href="/commissions/process" className="btn btn-nav">
+          COMMISSIONS
+        </Link>
+      </div>
       {true && (
         <>
           <section id="us">
