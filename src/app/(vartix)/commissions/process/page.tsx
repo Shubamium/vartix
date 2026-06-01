@@ -72,12 +72,9 @@ export default async function page({}: Props) {
                 >
                   <FaBluesky />
                 </a>
-                <a
-                  href="https://bsky.app/profile/vlightning.bsky.social"
-                  className="btn btn-sc"
-                >
+                <div className="btn btn-sc un">
                   <BsDiscord /> <span> v_lightning</span>
-                </a>
+                </div>
               </div>
             </div>
           </div>
@@ -210,7 +207,7 @@ export default async function page({}: Props) {
                   fill="black"
                 />
               </svg> */}
-              <img src="/d/icoa.png" alt="" />
+              <img src="/d/sparkle.png" alt="" />
             </div>
             <h2>Consistent Quality</h2>
             <p>
@@ -251,7 +248,7 @@ export default async function page({}: Props) {
           </div>
           <div className="card two">
             <div className="icon">
-              <img src="/d/icob.png" alt="" />
+              <img src="/d/energy.png" alt="" />
 
               {/* <svg
                 width="56"
@@ -321,7 +318,7 @@ export default async function page({}: Props) {
           </div>
           <div className="card three">
             <div className="icon">
-              <img src="/d/icoc.webp" alt="" />
+              <img src="/d/heart.png" alt="" />
             </div>
             <h2>Flexible Artstyles</h2>
             <p>

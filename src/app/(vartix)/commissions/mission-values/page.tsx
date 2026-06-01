@@ -24,7 +24,7 @@ export default function page({}: Props) {
           truly yours. Every model we create is built from scratch, with a
           strong focus on quality and staying true to your vision!
         </p>
-        <img src="/d																																																																																																																																																																																																bgchal.png" alt="" className="bgchar l" />
+        <img src="/d/bgchal.png" alt="" className="bgchar l" />
         <img src="/d/bgchar.png" alt="" className="bgchar r" />
       </section>
       <section id="principle">

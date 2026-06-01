@@ -317,7 +317,19 @@
         }
         &.square {
           .it {
+            // max-height: 80vh;
+            align-self: center;
+            // @media screen and (min-width: 1280px) {
+            height: min(80vh, 1024px);
+            width: auto;
+            max-width: 100%;
+            // }
+            // width: min-content;
             aspect-ratio: 1 / 1;
+            @media screen and (max-width: 1024px) {
+              width: 100%;
+              height: auto;
+            }
           }
         }
         gap: var(--gap);

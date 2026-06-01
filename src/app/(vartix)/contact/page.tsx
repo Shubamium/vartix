@@ -75,9 +75,9 @@ export default function page({}: Props) {
               >
                 <img src="/g/vgen.png" alt="" />
               </a>
-              <a href="#" className="btn btn-ct big">
+              {/* <a href="#" className="btn btn-ct big">
                 <span>Start Your Project</span> <GoTriangleRight />
-              </a>
+              </a> */}
             </div>
 
             <p className="note">

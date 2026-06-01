@@ -131,6 +131,8 @@ export default async function Home() {
             loop
             muted
             className="hbg"
+            playsInline
+            preload="auto"
           ></video>
         ) : (
           <></>
@@ -181,17 +183,20 @@ export default async function Home() {
       </section>
 
       <div id="homenav">
-        <Link href="/commissions" className="btn btn-nav">
+        <Link href="/portfolio" className="btn btn-nav">
           PORTFOLIO
         </Link>
         <Link href="/contact" className="btn btn-nav">
           CONTACT
         </Link>
-        <Link href="/FAQ" className="btn btn-nav">
+        <Link href="/faq" className="btn btn-nav">
           FAQ
         </Link>
         <Link href="/commissions/process" className="btn btn-nav">
-          COMMISSIONS
+          PROCESS
+        </Link>
+        <Link href="/commissions/mission-values" className="btn btn-nav">
+          MISSION & VALUES
         </Link>
       </div>
       {true && (
@@ -335,6 +340,7 @@ export default async function Home() {
                 muted
                 loop
                 controls
+                playsInline
               ></video>
               <Link href="/portfolio" className="btn btn-sample">
                 VIEW MORE SAMPLE <FaArrowRight />
@@ -347,6 +353,7 @@ export default async function Home() {
                 muted
                 loop
                 controls
+                playsInline
               ></video>
             </div>
             <div className="r">
@@ -376,6 +383,7 @@ export default async function Home() {
                 muted
                 loop
                 controls
+                playsInline
               ></video>
             </div>
             <InfiniteText t="VARTIX" r={true} className="bt" />
@@ -418,10 +426,9 @@ export default async function Home() {
                   </svg>
                 </h2>
                 <Link
-                  href="/commission/mission-values"
+                  href="/commissions/mission-values"
                   className="btn btn-values"
                 >
-                  {" "}
                   LEARN MORE
                 </Link>
                 <img src="/g/maid.png" alt="" />

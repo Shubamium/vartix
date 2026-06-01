@@ -31,7 +31,7 @@ export default function Header({}: Props) {
               <Link href={"/"} className="btn btn-nav">
                 HOME
               </Link>
-              <div className="btn-drop">
+              {/* <div className="btn-drop">
                 <button className="btn inter">
                   <GoTriangleDown /> <p>COMMISSIONS</p>
                 </button>
@@ -46,7 +46,17 @@ export default function Header({}: Props) {
                     MISSION & VALUES{" "}
                   </Link>
                 </div>
-              </div>
+              </div> */}
+              <Link href={"/commissions/process"} className="btn btn-nav">
+                PROCESS
+              </Link>
+              <Link
+                href={"/commissions/mission-values"}
+                className="btn btn-nav"
+              >
+                MISSION & VALUES
+              </Link>
+
               <Link href={"/portfolio"} className="btn btn-nav">
                 PORTFOLIO
               </Link>

@@ -32,7 +32,7 @@ export default function Footer({}: Props) {
           </p>
           <p></p>
 
-          <p className="attrib"> ©2025 VARTIX 3D - All rights reserved. </p>
+          <p className="attrib"> ©2026 VARTIX 3D - All rights reserved. </p>
         </div>
         <div className="r">
           <div className="fnav">

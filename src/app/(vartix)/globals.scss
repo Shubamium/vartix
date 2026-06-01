@@ -141,9 +141,25 @@ a {
   }
   @include mq(1024px) {
     height: 50px;
+
+    p {
+      font-size: 3rem;
+    }
+    .point .box {
+      width: 30px;
+      height: 30px;
+    }
   }
   @include mq(420px) {
     height: 40px;
+
+    p {
+      font-size: 2rem;
+    }
+    .point .box {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
 

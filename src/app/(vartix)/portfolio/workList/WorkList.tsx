@@ -131,6 +131,7 @@ const MediaRender = ({ media, className }: MediaRender) => {
         poster={media.thumbnailURL ?? "/empty.png"}
         autoPlay
         loop
+        playsInline
         muted
         className={`display ${className} loading`}
       ></video>
