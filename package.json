@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^16.2.7",
     "@payloadcms/db-mongodb": "^3.50.0",
     "@payloadcms/next": "^3.50.0",
     "@payloadcms/payload-cloud": "^3.50.0",

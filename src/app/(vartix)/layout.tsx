@@ -7,6 +7,7 @@ import Script from "next/script";
 import Footer from "./components/footer/Footer";
 import LoadingScreen from "./components/loading/LoadingScreen";
 import CustomCursor from "./components/cusCursor/CustomCursor";
+import Analytics from "./components/analytics/Analytics";
 const m = Manrope({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
@@ -73,6 +74,7 @@ export default function RootLayout({
         }
       >
         <LoadingScreen />
+        <Analytics />
         <CustomCursor />
         <Header />
         {children}

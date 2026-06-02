@@ -1,0 +1,49 @@
+#analytics_pop-up {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background: rgba(0, 0, 0, 0.914);
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .panel {
+    border: 2px dashed var(--g);
+    padding: 3em;
+    max-width: 700px;
+    background: black;
+    text-align: center;
+    box-sizing: 0px 0px 10px black;
+    h2 {
+      margin: 1em;
+    }
+
+    .action {
+      display: flex;
+      margin: 1em 0;
+      align-items: center;
+      justify-content: center;
+      gap: 1em;
+      padding: 1em;
+      .btn-main {
+        font-size: 1.2rem;
+        @media screen and (max-width: 550px) {
+          font-size: 1rem;
+        }
+        background: var(--g);
+        color: black;
+        font-weight: bold;
+        padding: 0.5em 1em;
+
+        &.reject {
+          background: black;
+          border: 2px solid var(--g);
+          color: var(--g);
+        }
+      }
+    }
+  }
+}
