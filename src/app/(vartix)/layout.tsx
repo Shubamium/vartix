@@ -23,13 +23,10 @@ const stroke = IBM_Plex_Mono({
   subsets: ["latin"],
 });
 
-const title = "Vartix";
+const title = "3D Art Studio – Vartix 3D";
 
 const description = `
-	  We are Vartix, a 3D modeling studio that specializes in creating 3D
-            models for VTubers. Our primary focus is in creating 3D models that
-            look 2D, ensuring they are as close to their 2D references as
-            possible.
+	 Vartix 3D is an international 3D art studio providing premium creative services to clients worldwide. We create high-quality custom 3D art and fully custom 3D VTuber models from scratch. Every project is unique, and we work closely with our clients to bring their ideas to life with the highest level of quality and care!
 `;
 const banner =
   "https://shubastore.venmiart.com/api/public/dl/WU-VRzdt?inline=true";

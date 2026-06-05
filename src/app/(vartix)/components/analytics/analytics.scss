@@ -1,24 +1,40 @@
 #analytics_pop-up {
   position: fixed;
-  top: 0%;
-  left: 0%;
+  bottom: 15px;
+  right: 15px;
   background: rgba(0, 0, 0, 0.914);
   z-index: 1000;
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
 
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 550px) {
+    bottom: 0%;
+    right: 0%;
+  }
   .panel {
     border: 2px dashed var(--g);
-    padding: 3em;
+    padding: 1em;
     max-width: 700px;
     background: black;
     text-align: center;
     box-sizing: 0px 0px 10px black;
+    @media screen and (max-width: 4550px) {
+      padding: 0.2em;
+    }
     h2 {
       margin: 1em;
+
+      @media screen and (max-width: 550px) {
+        font-size: 1rem;
+      }
+    }
+    p {
+      @media screen and (max-width: 550px) {
+        font-size: 0.6rem;
+      }
     }
 
     .action {
@@ -28,10 +44,13 @@
       justify-content: center;
       gap: 1em;
       padding: 1em;
+      @media screen and (max-width: 550px) {
+        flex-wrap: wrap;
+      }
       .btn-main {
         font-size: 1.2rem;
         @media screen and (max-width: 550px) {
-          font-size: 1rem;
+          font-size: 0.7rem;
         }
         background: var(--g);
         color: black;

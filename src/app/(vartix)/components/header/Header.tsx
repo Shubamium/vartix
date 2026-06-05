@@ -128,7 +128,7 @@ export default function Header({}: Props) {
             <div className="big-logo">
               <img src="/g/logo_m.png" alt="" className="big_logo" />
             </div>
-            <div className=" btn-nav drop hstroke">
+            {/* <div className=" btn-nav drop hstroke">
               <div className="r">
                 <p>COMMISSIONS</p>
                 <svg
@@ -157,7 +157,44 @@ export default function Header({}: Props) {
                   MISSION & VALUES
                 </Link>
               </div>
-            </div>
+            </div> */}
+            <Link href="/commissions/process" className="btn btn-nav  hstroke">
+              PROCESS
+              <svg
+                width="426"
+                height="80"
+                viewBox="0 0 426 80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M83.3455 3.21472C51.0427 15.8074 18.7398 28.4 7.30025 34.8871C-4.13931 41.3742 6.26331 41.3742 38.1763 37.8154C70.0892 34.2567 123.197 27.1391 156.305 22.1037C201.067 15.2956 214.399 12.0578 215.518 14.2561C216.304 15.799 212.258 18.6444 198.255 27.1723C159.549 50.7448 130.929 66.2443 131.717 68.4592C135.468 79.0024 163.414 63.5399 200.006 53.6185C224.293 47.0332 261.235 41.507 284.239 38.1224C307.242 34.7378 315.455 34.7378 319.412 35.8328C323.369 36.9278 322.821 39.1178 321.444 41.341C314.715 52.2051 305.699 64.5354 299.046 75.6265C299.561 79.5006 324.779 74.0753 369.218 61.9223C389.567 56.8869 405.445 54.1494 423.463 51.3289"
+                  stroke="#FC69B0"
+                  strokeWidth="5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </Link>
+            <Link
+              href="/commissions/mission-values"
+              className="btn btn-nav  hstroke"
+            >
+              MISSION & VALUES
+              <svg
+                width="426"
+                height="80"
+                viewBox="0 0 426 80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M83.3455 3.21472C51.0427 15.8074 18.7398 28.4 7.30025 34.8871C-4.13931 41.3742 6.26331 41.3742 38.1763 37.8154C70.0892 34.2567 123.197 27.1391 156.305 22.1037C201.067 15.2956 214.399 12.0578 215.518 14.2561C216.304 15.799 212.258 18.6444 198.255 27.1723C159.549 50.7448 130.929 66.2443 131.717 68.4592C135.468 79.0024 163.414 63.5399 200.006 53.6185C224.293 47.0332 261.235 41.507 284.239 38.1224C307.242 34.7378 315.455 34.7378 319.412 35.8328C323.369 36.9278 322.821 39.1178 321.444 41.341C314.715 52.2051 305.699 64.5354 299.046 75.6265C299.561 79.5006 324.779 74.0753 369.218 61.9223C389.567 56.8869 405.445 54.1494 423.463 51.3289"
+                  stroke="#FC69B0"
+                  strokeWidth="5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </Link>
             <Link href="/portfolio" className="btn btn-nav  hstroke">
               PORTFOLIO
               <svg
@@ -226,14 +263,31 @@ export default function Header({}: Props) {
                 />
               </svg>
             </Link>
+            <Link href="/contact" className="btn btn-nav hstroke alt">
+              START YOUR PROJECT <CgArrowTopRight className="icon" />
+              <svg
+                width="426"
+                height="80"
+                viewBox="0 0 426 80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M83.3455 3.21472C51.0427 15.8074 18.7398 28.4 7.30025 34.8871C-4.13931 41.3742 6.26331 41.3742 38.1763 37.8154C70.0892 34.2567 123.197 27.1391 156.305 22.1037C201.067 15.2956 214.399 12.0578 215.518 14.2561C216.304 15.799 212.258 18.6444 198.255 27.1723C159.549 50.7448 130.929 66.2443 131.717 68.4592C135.468 79.0024 163.414 63.5399 200.006 53.6185C224.293 47.0332 261.235 41.507 284.239 38.1224C307.242 34.7378 315.455 34.7378 319.412 35.8328C323.369 36.9278 322.821 39.1178 321.444 41.341C314.715 52.2051 305.699 64.5354 299.046 75.6265C299.561 79.5006 324.779 74.0753 369.218 61.9223C389.567 56.8869 405.445 54.1494 423.463 51.3289"
+                  stroke="#FC69B0"
+                  strokeWidth="5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </Link>
           </div>
           <div className="bottombt">
             <button className="btn btn-nav ">
               CLOSE <FaCircleXmark />
             </button>
-            <Link href="/contact" className="btn btn-nav ">
+            {/* <Link href="/contact" className="btn btn-nav ">
               START YOUR PROJECT <CgArrowTopRight />
-            </Link>
+            </Link> */}
           </div>
         </nav>
       </div>
