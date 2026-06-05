@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   @media screen and (max-width: 550px) {
     bottom: 0%;
     right: 0%;
@@ -21,7 +22,7 @@
     background: black;
     text-align: center;
     box-sizing: 0px 0px 10px black;
-    @media screen and (max-width: 4550px) {
+    @media screen and (max-width: 550px) {
       padding: 0.2em;
     }
     h2 {
